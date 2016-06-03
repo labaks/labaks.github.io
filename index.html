@@ -7,25 +7,5 @@
         <link rel="stylesheet" type="text/css" href="style.css" media="all"/>
     </head>
     <body>
-	<div class="over">
-		<div class="guardianTabTitle"><div>some text</div></div>
-		<div class="guardianTabTitle"><div>someText</div></div>
-		<div class="guardianTabTitle currentTab"><div>someText</div></div>
-		<div class="guardianTabTitle"><div>someText</div></div>
-		<div class="guardianTabTitle"><div>someText</div></div>
-		<div class="guardianTabTitle"><div>Another Text</div></div>
-	</div>
-        <section>
-            <span id="duel"></span>
-            <button onclick="pick();">PLAY</button>
-        </section>
-        <script>
-            var classes = ['Разбойник', 'Маг', 'Охотник', 'Чернокнижник', 'Жрец', 'Друид', 'Воин', 'Шаман', 'Паладин'];
-
-            function pick() {
-                var duel = document.getElementById("duel");
-                duel.innerHTML = classes[parseInt(Math.random() * 9)] + ' vs ' + classes[parseInt(Math.random() * 9)];
-            }
-        </script>
     </body>
 </html>
