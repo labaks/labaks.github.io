@@ -84,17 +84,34 @@ function init() {
 
 	document.addEventListener("keydown", checkKeyDown, false);
 	document.addEventListener("keyup", checkKeyUp, false);
-	newGameBtn.addEventListener("click", startLoop, false);
+	newGameBtn.addEventListener("click", startGame, false);
 
 }
 
+function startGame() {
+	resetHealth();
+	drawBg();
+	clearCtxPl();
+	player.drawX = 10;
+	player.drawY = 218;
+	destroyEnemies(spawnAmount);
+	player.draw();
+	startLoop();
+}
+
 function resetHealth() {
-	health = 100;
+	health = 10;
 }
 
 function spawnEnemy(count) {
 	for (var i = 0; i < count; i++) {
 		enemies[i] = new Enemy();
+	}
+}
+
+function destroyEnemies(count) {
+	for (var i = 0; i < count; i++) {
+		enemies[i].destroy();
 	}
 }
 
