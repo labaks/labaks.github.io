@@ -1,27 +1,24 @@
-article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section { display: block; }
 body {
-    background: #ccc;
+	background: #333;
 }
-.wrapper {
-	width: 820px;
-	height: 420px;
-	background: #000;
-	border-radius: 10px;
-	padding: 8px;
-	box-sizing: border-box;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -210px 0 0 -410px;
-}
-.main {
-	width: 800px;
-	height: 400px;
-	border-radius: 10px;
-	border: 2px solid #fff;
-}
-h1, h2, h3 {
+#gameName {
 	color: #fff;
-	margin: 0;
+	text-align: center;
+	font: 24px bold Courier;
 }
-		
+canvas {
+	display: block;
+	margin: 30px auto 0;
+}
+#player, #enemy, #stats {
+	margin: -500px auto 0;
+}
+input {
+	display: block;
+	margin: 5px auto 0;
+	border: 2px solid white;
+	background: black;
+	border-radius: 4px;
+	color: white;
+	font: 24px bold Courier;
+}
