@@ -31,6 +31,14 @@ var enemies = [];
 
 var isPlaying;
 var health;
+var distance;
+
+var modalDialog;
+var gameOverMessage;
+var passedMessage;
+var distanceMessage;
+
+var distanceInterval;
 
 var mapX = 0;
 var map1X = gameWidth;
@@ -75,12 +83,18 @@ function init() {
 	ctxStats.font = "bold 35 Arial"
 
 	newGameBtn = document.getElementById("newGame");
+	modalDialog = document.getElementById("modalDialog");
+	gameOverMessage = document.getElementById("gameOverMessage");
+	passedMessage = document.getElementById("passedMessage");
+	distanceMessage = document.getElementById("distance");
 
 	player = new Player;
 
 	resetHealth();
+	resetDistance();
 	drawBg();
 	player.draw();
+	showModalDialog();
 
 	document.addEventListener("keydown", checkKeyDown, false);
 	document.addEventListener("keyup", checkKeyUp, false);
@@ -90,6 +104,7 @@ function init() {
 
 function startGame() {
 	resetHealth();
+	resetDistance();
 	drawBg();
 	clearCtxPl();
 	player.drawX = 10;
@@ -97,10 +112,16 @@ function startGame() {
 	player.draw();
 	startLoop();
 	destroyEnemies();
+	countDistance();
+	hideModalDialog();
 }
 
 function resetHealth() {
 	health = 20;
+}
+
+function resetDistance() {
+	distance = 0;
 }
 
 function spawnEnemy(count) {
@@ -112,7 +133,6 @@ function spawnEnemy(count) {
 function destroyEnemies() {
 	for (var i = enemies.length - 1; i >= 0; i--) {
 		enemies[i].destroy();
-		console.log("enemy " + i + " destroyed");
 	}
 }
 
@@ -123,6 +143,15 @@ function startCreatingEnemies() {
 
 function stopCreatingEnemies() {
 	clearInterval(spawnInterval);
+}
+
+function countDistance() {
+	stopCountDistance();
+	distanceInterval = setInterval(function(){distance++}, 1000);
+}
+
+function stopCountDistance() {
+	clearInterval(distanceInterval);
 }
 
 function loop() {
@@ -151,6 +180,14 @@ function draw() {
 	for (var i = 0; i < enemies.length; i++) {
 		enemies[i].draw();
 	}
+}
+
+function gameOver() {
+	stopLoop();
+	showModalDialog();
+	gameOverMessage.style.display = "block";
+	passedMessage.style.display = "block";
+	distanceMessage.innerHTML = distance;
 }
 
 function update() {
@@ -196,7 +233,7 @@ Player.prototype.draw = function() {
 
 Player.prototype.update = function() {
 
-	if(health <= 0) stopLoop();
+	if(health <= 0) gameOver();
 	if(this.drawX < 0) this.drawX = 0;
 	if(this.drawX > gameWidth - this.width) this.drawX = gameWidth - this.width;
 	if(this.drawY < 0) this.drawY = 0;
@@ -306,6 +343,7 @@ function clearCtxEnemy() {
 function updateStats() {
 	ctxStats.clearRect(0, 0, gameWidth, gameHeight);
 	ctxStats.fillText("Health: " + health, 10, 20);
+	ctxStats.fillText("Distance: " + distance + " meters", 680, 20);
 }
 
 function drawBg() {
@@ -314,4 +352,12 @@ function drawBg() {
 		mapX, 0, gameWidth, gameHeight); //coordinates on canvas
 	ctxMap.drawImage(bg1, 0, 0, bgWidth, bgHeight, //image parammeters
 		map1X, 0, gameWidth, gameHeight); //coordinates on canvas
+}
+
+function showModalDialog() {
+	modalDialog.style.display = "block";
+}
+
+function hideModalDialog() {
+	modalDialog.style.display = "none";
 }
