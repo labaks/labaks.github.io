@@ -41,7 +41,7 @@ var bgHeight = 1500;
 //For creating enemies
 var spawnInterval;
 var spawnTime = 10000;
-var spawnAmount = 10;
+var spawnAmount = 3;
 
 var requestAnimFrame = window.requestAnimationFrame ||
 						window.webkitRequestAnimationFrame ||
@@ -94,9 +94,9 @@ function startGame() {
 	clearCtxPl();
 	player.drawX = 10;
 	player.drawY = 218;
-	destroyEnemies(spawnAmount);
 	player.draw();
 	startLoop();
+	destroyEnemies();
 }
 
 function resetHealth() {
@@ -109,9 +109,10 @@ function spawnEnemy(count) {
 	}
 }
 
-function destroyEnemies(count) {
-	for (var i = 0; i < count; i++) {
+function destroyEnemies() {
+	for (var i = enemies.length; i >= 0; i--) {
 		enemies[i].destroy();
+		console.log("enemy " + i + " destroyed");
 	}
 }
 
