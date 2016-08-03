@@ -26,6 +26,9 @@ bg1.src = "img/bg.jpg";
 var tiles = new Image();
 tiles.src = "img/tiles.png";
 
+var playerImg = new Image();
+playerImg.src = "img/player.png";
+
 var player;
 var enemies = [];
 
@@ -236,15 +239,15 @@ function moveBg() {
 
 //Objects
 function Player() {
-	this.srcX = 128;
-	this.srcY = 96;
+	this.srcX = 0;
+	this.srcY = 0;
 	this.drawX = 10;
 	this.drawY = 218;
-	this.width = 32;
-	this.height = 32;
+	this.width = 178;
+	this.height = 112;
 	this.speed = 5;
-	this.startAnim = 96;
-	this.endAnim = 160;
+	this.startAnim = 0;
+	this.endAnim = 712;
 
 	this.isUp = false;
 	this.isDown = false;
@@ -254,7 +257,7 @@ function Player() {
 
 Player.prototype.draw = function() {
 	clearCtxPl();
-	ctxPl.drawImage(tiles, this.srcX, this.srcY, this.width, this.height, //image parammeters
+	ctxPl.drawImage(playerImg, this.srcX, this.srcY, this.width, this.height, //image parammeters
 		this.drawX, this.drawY, this.width, this.height); //coordinates on canvas
 }
 
@@ -295,7 +298,7 @@ Player.prototype.anim = function() {
 	}
 	plOffset = this.width * plAnimIndex;
 	this.srcX += plOffset;
-	if(this.srcX > this.endAnim) this.srcX = this.startAnim;
+	if(this.srcX >= this.endAnim) this.srcX = this.startAnim;
 }
 
 function Enemy() {
