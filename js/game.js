@@ -130,7 +130,7 @@ function startGame() {
 }
 
 function resetHealth() {
-	health = 20;
+	health = 100;
 }
 
 function resetDistance() {
@@ -259,6 +259,11 @@ Player.prototype.draw = function() {
 	clearCtxPl();
 	ctxPl.drawImage(playerImg, this.srcX, this.srcY, this.width, this.height, //image parammeters
 		this.drawX, this.drawY, this.width, this.height); //coordinates on canvas
+
+	// Rect for test
+	// ctxPl.beginPath();
+	// ctxPl.rect(this.drawX, this.drawY, this.width, this.height);
+	// ctxPl.fill();
 }
 
 Player.prototype.update = function() {
@@ -270,10 +275,10 @@ Player.prototype.update = function() {
 	if(this.drawY > gameHeight - this.height) this.drawY = gameHeight - this.height;
 
 	for (var i = 0; i < enemies.length; i++) {
-		if(this.drawX >= enemies[i].drawX &&
-			this.drawY >= enemies[i].drawY &&
-			this.drawX <= enemies[i].drawX + enemies[i].width &&
-			this.drawY <= enemies[i].drawY + enemies[i].height) {
+		if (this.drawX < (enemies[i].drawX + enemies[i].width) &&
+			this.drawY < (enemies[i].drawY + enemies[i].height) &&
+			(this.drawX + this.width) > enemies[i].drawX &&
+			(this.drawY + this.height) > enemies[i].drawY) {
 			health -= 3;
 		}
 	}
@@ -316,6 +321,11 @@ function Enemy() {
 Enemy.prototype.draw = function() {
 	ctxEnemy.drawImage(tiles, this.srcX, this.srcY, this.width, this.height, //image parammeters
 		this.drawX, this.drawY, this.width, this.height); //coordinates on canvas
+
+	// Rect for test
+	// ctxEnemy.beginPath();
+	// ctxEnemy.rect(this.drawX, this.drawY, this.width, this.height);
+	// ctxEnemy.fill();
 }
 
 Enemy.prototype.update = function() {
