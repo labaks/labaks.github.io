@@ -1,41 +1,42 @@
 document.addEventListener("DOMContentLoaded", createTable);
 
 function createTable() {
-// Это количество строк
     var rows = 151;
-// Это количество ячеек в строке (количество столбцов)
-    var cells = 2;
+    var cells = 4;
 
-// Получить ссылку на body
     var body = document.body;
 
-// Создать элемент <table> и элемент <tbody>
     var table = document.createElement("table");
     var tableBody = document.createElement("tbody");
 
-// Создать все ячейки
     for (var j = 0; j < rows; j++) {
-        // Создать строку
         var row = document.createElement("tr");
 
-        for (var i = 0; i < cells; i++) {
-            // Создать и заполнить элемент <td>
+        for (var i = 2; i < cells; i++) {
             var cell = document.createElement("td");
-            if (i === 0) {
-                // Здесь нужно будет заполнить своими данными ячейку
-                var cellText = document.createTextNode(base[j].id);
-            } else cellText = document.createTextNode(base[j].name);
-
+            var cellText;
+            // 0 == id, 1 == name, 2 == nameRus, 3 == maxCp
+            switch (i) {
+                case 0:
+                    cellText = document.createTextNode(base[j].id);
+                    break;
+                case 1:
+                    cellText = document.createTextNode(base[j].name);
+                    break;
+                case 2:
+                    cellText = document.createTextNode(base[j].nameRus);
+                    break;
+                case 3:
+                    cellText = document.createTextNode(base[j].maxCp);
+                    break;
+            }
             cell.appendChild(cellText);
             row.appendChild(cell);
         }
 
-        // Добавить строку в конец элемента tbody
         tableBody.appendChild(row);
     }
 
-// Поместить <tbody> внуть <table>
     table.appendChild(tableBody);
-// // Добавить <table> внутрь <body>
     body.appendChild(table);
 }
