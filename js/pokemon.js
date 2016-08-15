@@ -24,7 +24,7 @@ function createTable() {
             if (i === 0) {
                 // Здесь нужно будет заполнить своими данными ячейку
                 var cellText = document.createTextNode(base[j].id);
-            } else var cellText = document.createTextNode(base[j].name);
+            } else cellText = document.createTextNode(base[j].name);
 
             cell.appendChild(cellText);
             row.appendChild(cell);
