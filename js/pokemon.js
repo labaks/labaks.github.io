@@ -12,7 +12,7 @@ function createTable() {
     for (var j = 0; j < rows; j++) {
         var row = document.createElement("tr");
 
-        for (var i = 2; i < cells; i++) {
+        for (var i = 0; i < cells; i++) {
             var cell = document.createElement("td");
             var cellText;
             // 0 == id, 1 == name, 2 == nameRus, 3 == maxCp

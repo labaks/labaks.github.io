@@ -152,3 +152,33 @@ var base =
             {id: 150, name: "Mew", nameRus: "Мью", maxCp: 3299},
             {id: 151, name: "Mewtwo", nameRus: "Мьюту", maxCp: 4144}
         ];
+var attackDexStandart =
+        [
+            {id: 1, name: "Acid", type: 3, damage: 10, energy: 7, timeout: 1.05, pokemonsHave: []},
+            {id: 2, name: "Bite", type: 16, damage: 6, energy: 7, timeout: 0.5, pokemonsHave: []},
+            {id: 3, name: "Bubble", type: 10, damage: 25, energy: 15, timeout: 2.3, pokemonsHave: []},
+            {id: 4, name: "Bug Bite", type: 6, damage: 5, energy: 7, timeout: 0.45, pokemonsHave: []},
+            {id: 5, name: "Bullet Punch", type: 8, damage: 10, energy: 7, timeout: 1.2, pokemonsHave: []},
+            {id: 6, name: "Confusion", type: 13, damage: 15, energy: 7, timeout: 1.51, pokemonsHave: []},
+            {id: 7, name: "Cut", type: 1, damage: 12, energy: 7, timeout: 1.13, pokemonsHave: []},
+            {id: 8, name: "Dragon Breath", type: 15, damage: 6, energy: 7, timeout: 0.5, pokemonsHave: []},
+            {id: 9, name: "Ember", type: 9, damage: 10, energy: 7, timeout: 1.05, pokemonsHave: []},
+            {id: 10, name: "Feint Attack", type: 16, damage: 12, energy: 7, timeout: 1.04, pokemonsHave: []},
+            {id: 11, name: "Fire Fang", type: 9, damage: 10, energy: 4, timeout: 0.84, pokemonsHave: []},
+            {id: 12, name: "Frost Breath", type: 14, damage: 9, energy: 7, timeout: 0.81, pokemonsHave: []},
+            {id: 13, name: "Fury Cutter", type: 6, damage: 3, energy: 12, timeout: 0.4, pokemonsHave: []},
+            {id: 14, name: "Ice Shard", type: 14, damage: 15, energy: 7, timeout: 1.4, pokemonsHave: []},
+            {id: 15, name: "Karate Chop", type: 2, damage: 6, energy: 7, timeout: 0.8, pokemonsHave: []},
+            {id: 16, name: "Lick", type: 7, damage: 5, energy: 7, timeout: 0.5, pokemonsHave: []},
+            {id: 17, name: "Low Kick", type: 2, damage: 5, energy: 7, timeout: 0.5, pokemonsHave: []},
+            {id: 18, name: "Metal Claw", type: 8, damage: 12, energy: 7, timeout: 0.63, pokemonsHave: []},
+            {id: 19, name: "Mud Shot", type: 4, damage: 12, energy: 7, timeout: 0.55, pokemonsHave: []},
+            {id: 20, name: "Mud Slap", type: 4, damage: 15, energy: 9, timeout: 1.35, pokemonsHave: []},
+            {id: 21, name: "Peck", type: 18, damage: 10, energy: 10, timeout: 1.15, pokemonsHave: []},
+            {id: 22, name: "Poison Jab", type: 3, damage: 15, energy: 7, timeout: 1.05, pokemonsHave: []},
+            {id: 23, name: "Poison Sting", type: 3, damage: 6, energy: 4, timeout: 0.58, pokemonsHave: []},
+            {id: 24, name: "Pound", type: 1, damage: 7, energy: 7, timeout: 0.54, pokemonsHave: []},
+            {id: 25, name: "Psycho Cut", type: 13, damage: 8, energy: 7, timeout: 0.57, pokemonsHave: []},
+            {id: 26, name: "Quick Attack", type: 1, damage: 10, energy: 7, timeout: 1.33, pokemonsHave: []},
+            {id: 27, name: "Razor Leaf", type: 11, damage: 15, energy: 7, timeout: 1.45, pokemonsHave: []},
+        ];
