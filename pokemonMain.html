@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Pokemon Main</title>
-		<link rel="stylesheet" href="styles/pokemonMainStyle.css">
-		<link rel="shortcut icon" href="img/mainIcon.ico" type="image/x-icon">
-		<script src="js/pokemon.js"></script>
-		<script src="js/base.js"></script>
-	</head>
-	<body>
-	</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pokemon Main</title>
+        <link rel="stylesheet" href="styles/pokemonMainStyle.css">
+        <link rel="shortcut icon" href="img/mainIcon.ico" type="image/x-icon">
+        <script src="js/pokemon.js"></script>
+        <script src="js/base.js"></script>
+    </head>
+    <body>
+        <input id="input" type="text" name="two"/>
+        <button onclick="pokemonInfo();">find</button>
+        <p id="name"></p>
+        <span>Type: </span><span id="type"></span>
+        <br/>
+        <span>Max CP: </span><span id="maxCp"></span>
+        <br/>
+        <p>Standart Attacks:</p>
+        <div id="standartAttacks"></div>
+        <p>Ultimate Attacks:</p>
+        <div id="ultimateAttacks"></div>
+    </body>
 </html>
