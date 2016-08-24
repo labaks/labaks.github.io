@@ -1,8 +1,11 @@
 //document.addEventListener("DOMContentLoaded", createTable);
 
+var REM;
+
 function createTable(cells, idContainer, array) {
     var container = document.getElementById(idContainer);
     var table = document.createElement("table");
+    table.id = 'table' + idContainer;
     var tableBody = document.createElement("tbody");
     for (var j = 0; j < array.length; j++) {
         var row = document.createElement("tr");
@@ -31,7 +34,23 @@ function one() {
     }
 }
 
+function clearPokemonInfo() {
+    document.getElementById("name").innerHTML = document.getElementById("type").innerHTML = document.getElementById("maxCp").innerHTML = "";
+    var parent1 = document.getElementById("standartAttacks");
+    var parent2 = document.getElementById("ultimateAttacks");
+    var child1 = document.getElementById("tablestandartAttacks");
+    var child2 = document.getElementById("tableultimateAttacks");
+    parent1.removeChild(child1);
+    parent2.removeChild(child2);
+
+}
+
 function pokemonInfo() {
+    if (REM > 0) {
+        clearPokemonInfo();
+        REM = 0;
+    }
+    ;
     var name = document.getElementById("input").value;
     document.getElementById("name").innerHTML = name;
     var pokemon;
@@ -45,13 +64,18 @@ function pokemonInfo() {
             pokemon = base[k];
         }
     }
-//Find type;
-//    for (var k = 0; k < types.length; k++) {
-//        if(types[k].id === pokemon.type) {
-//            document.getElementById("type").innerHTML = types[k].type;
-//        }
-//    }
-    document.getElementById("maxCp").innerHTML = pokemon.maxCp;
+    //Find type;
+    for (var k = 0; k < types.length; k++) {
+        for (var i = 0; i < pokemon.type.length; i++) {
+            if (types[k].id === pokemon.type[i]) {
+                if (i > 0) {
+                    document.getElementById("type").innerHTML += ", ";
+                }
+                document.getElementById("type").innerHTML += types[k].type;
+            }
+        }
+    }
+    document.getElementById("maxCp").innerHTML = pokemon.maxCP;
     //Find Standart Attacks;
     for (var i = 0; i < attackDexStandart.length; i++) {
         for (var j = 0; j < attackDexStandart[i].pokemonsHave.length; j++) {
@@ -80,4 +104,6 @@ function pokemonInfo() {
         }
     }
     createTable(uAttacks[0].length, "ultimateAttacks", uAttacks);
+    console.log(pokemon);
+    REM = 1;
 }
