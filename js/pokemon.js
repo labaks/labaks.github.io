@@ -65,13 +65,13 @@ function pokemonInfo() {
         }
     }
     //Find type;
-    for (var k = 0; k < types.length; k++) {
-        for (var i = 0; i < pokemon.type.length; i++) {
-            if (types[k].id === pokemon.type[i]) {
-                if (i > 0) {
+    for (var k = 0; k < pokemon.type.length; k++) {
+        for (var i = 0; i < types.length; i++) {
+            if (types[i].id === pokemon.type[k]) {
+                if (k > 0) {
                     document.getElementById("type").innerHTML += ", ";
                 }
-                document.getElementById("type").innerHTML += types[k].type;
+                document.getElementById("type").innerHTML += types[i].type;
             }
         }
     }
@@ -107,3 +107,13 @@ function pokemonInfo() {
     console.log(pokemon);
     REM = 1;
 }
+
+$(function () {
+    var availableTags = [];
+    for (var i = 0; i < base.length; i++) {
+        availableTags.push(base[i].name);
+    }
+    $("#input").autocomplete({
+        source: availableTags
+    });
+});

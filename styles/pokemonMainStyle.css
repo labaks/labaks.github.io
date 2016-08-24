@@ -6,3 +6,19 @@ table td {
 	border: 1px solid black;
 	padding: 5px;
 }
+.ui-helper-hidden-accessible { display: none; }
+.ui-autocomplete {
+	background: white;
+	list-style: none;
+	border: 1px solid black;
+	padding: 0;
+	width: 173px !important;
+}
+.ui-autocomplete li {
+	padding: 2px 5px;
+	border-bottom: 1px solid black;
+}
+.ui-autocomplete li:hover {
+	background: gray;
+	color: white;
+}
