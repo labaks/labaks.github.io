@@ -60,7 +60,7 @@ function pokemonInfo() {
     var uAttacks = [];
     //Find by name;
     for (var k = 0; k < base.length; k++) {
-        if (base[k].name == name) {
+        if (base[k].name == name || base[k].nameRus == name) {
             pokemon = base[k];
         }
     }
@@ -77,41 +77,34 @@ function pokemonInfo() {
     }
     document.getElementById("maxCp").innerHTML = pokemon.maxCP;
     //Find Standart Attacks;
-    for (var i = 0; i < attackDexStandart.length; i++) {
-        for (var j = 0; j < attackDexStandart[i].pokemonsHave.length; j++) {
-            if (attackDexStandart[i].pokemonsHave[j] === pokemon.id) {
-                for (var l = 0; l < types.length; l++) {
-                    if (attackDexStandart[i].type === types[l].id) {
-                        var sAttack = [attackDexStandart[i].name, types[l].type, attackDexStandart[i].damage];
-                        sAttacks.push(sAttack);
-                    }
-                }
-            }
-        }
-    }
+    findAttacks(attackDexStandart, sAttacks, pokemon);
     createTable(sAttacks[0].length, "standartAttacks", sAttacks);
-//Find Ultimate Attacks;
-    for (var i = 0; i < attackDexUltimate.length; i++) {
-        for (var j = 0; j < attackDexUltimate[i].pokemonsHave.length; j++) {
-            if (attackDexUltimate[i].pokemonsHave[j] === pokemon.id) {
-                for (var l = 0; l < types.length; l++) {
-                    if (attackDexUltimate[i].type === types[l].id) {
-                        var uAttack = [attackDexUltimate[i].name, types[l].type, attackDexUltimate[i].damage];
-                        uAttacks.push(uAttack);
-                    }
-                }
-            }
-        }
-    }
+    //Find Ultimate Attacks;
+    findAttacks(attackDexUltimate, uAttacks, pokemon);
     createTable(uAttacks[0].length, "ultimateAttacks", uAttacks);
     console.log(pokemon);
     REM = 1;
 }
 
+function findAttacks(dex, output, pokemon) {
+    for (var i = 0; i < dex.length; i++) {
+        for (var j = 0; j < dex[i].pokemonsHave.length; j++) {
+            if (dex[i].pokemonsHave[j] === pokemon.id) {
+                for (var l = 0; l < types.length; l++) {
+                    if (dex[i].type === types[l].id) {
+                        var attack = [dex[i].name, types[l].type, dex[i].damage];
+                        output.push(attack);
+                    }
+                }
+            }
+        }
+    }
+}
+
 $(function () {
     var availableTags = [];
     for (var i = 0; i < base.length; i++) {
-        availableTags.push(base[i].name);
+        availableTags.push(base[i].name, base[i].nameRus);
     }
     $("#input").autocomplete({
         source: availableTags

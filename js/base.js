@@ -236,7 +236,7 @@ var attackDexUltimate = [
     {id: 17, name: "Dazzling Gleam", type: 17, damage: 55, critChance: 5, timeout: 4.2, energy: 3, pokemonsHave: [36, 40, 64, 65, 113]},
     {id: 18, name: "Dig", type: 4, damage: 70, critChance: 5, timeout: 5.8, energy: 3, pokemonsHave: [19, 20, 27, 30, 33, 50, 74, 75, 104, 105, 133]},
     {id: 19, name: "Disarming Voice", type: 17, damage: 25, critChance: 5, timeout: 3.9, energy: 5, pokemonsHave: [35, 39]},
-    {id: 20, name: "Discharge", type: 12, damage: 35, critChance: 5, timeout: 2.5, energy: 3, pokemonsHave: [25, 81, 82, 100, 101, 135, 137, 135]},
+    {id: 20, name: "Discharge", type: 12, damage: 35, critChance: 5, timeout: 2.5, energy: 3, pokemonsHave: [25, 81, 82, 100, 101, 135, 137, 145]},
     {id: 21, name: "Dragon Claw", type: 15, damage: 35, critChance: 25, timeout: 1.5, energy: 2, pokemonsHave: [6, 149]},
     {id: 22, name: "Dragon Pulse", type: 15, damage: 65, critChance: 5, timeout: 3.6, energy: 2, pokemonsHave: [116, 117, 130, 131, 148, 149, 150]},
     {id: 23, name: "Draining Kiss", type: 17, damage: 25, critChance: 5, timeout: 2.8, energy: 5, pokemonsHave: [124]},
