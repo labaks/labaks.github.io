@@ -1,6 +1,6 @@
 //document.addEventListener("DOMContentLoaded", createTable);
 
-var REM;
+var REM = false;
 
 function createTable(cells, idContainer, array) {
     var container = document.getElementById(idContainer);
@@ -46,9 +46,9 @@ function clearPokemonInfo() {
 }
 
 function pokemonInfo() {
-    if (REM > 0) {
+    if (REM) {
         clearPokemonInfo();
-        REM = 0;
+        REM = false;
     }
     ;
     var name = document.getElementById("input").value;
@@ -75,6 +75,21 @@ function pokemonInfo() {
             }
         }
     }
+    //Find super effective attacks
+    var superAttacks = [];
+    for (var i = 0; i < pokemon.type.length; i++) {
+        superAttacks.push(typeTable[pokemon.type[i] - 1]);
+    }
+    var superAttacksTypes = [];
+    for (var i = 0; i < superAttacks.length; i++) {
+        for (var j = 0; j < superAttacks[i].length; j++) {
+            if (superAttacks[i][j] === 2) {
+                superAttacksTypes.push(j + 1);
+            }
+        }
+    }
+    console.log(superAttacks);
+    console.log(superAttacksTypes);
     document.getElementById("maxCp").innerHTML = pokemon.maxCP;
     //Find Standart Attacks;
     findAttacks(attackDexStandart, sAttacks, pokemon);
@@ -82,8 +97,7 @@ function pokemonInfo() {
     //Find Ultimate Attacks;
     findAttacks(attackDexUltimate, uAttacks, pokemon);
     createTable(uAttacks[0].length, "ultimateAttacks", uAttacks);
-    console.log(pokemon);
-    REM = 1;
+    REM = true;
 }
 
 function findAttacks(dex, output, pokemon) {
@@ -100,6 +114,7 @@ function findAttacks(dex, output, pokemon) {
         }
     }
 }
+
 
 $(function () {
     var availableTags = [];
