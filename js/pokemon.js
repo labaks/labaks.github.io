@@ -47,6 +47,36 @@ function clearPokemonInfo() {
     var parentUA = document.getElementById("ultimateAttacks");
     var childUA = document.getElementById("tableultimateAttacks");
     parentUA.removeChild(childUA);
+    if ($("#tablex0AttacksS").length > 0) {
+        var parentX0S = document.getElementById("x0AttacksS");
+        var childX0S = document.getElementById("tablex0AttacksS");
+        parentX0S.removeChild(childX0S);
+    }
+    if ($("#tablex025AttacksS").length > 0) {
+        var parentX025S = document.getElementById("x025AttacksS");
+        var childX025S = document.getElementById("tablex025AttacksS");
+        parentX025S.removeChild(childX025S);
+    }
+    if ($("#tablex05AttacksS").length > 0) {
+        var parentX05S = document.getElementById("x05AttacksS");
+        var childX05S = document.getElementById("tablex05AttacksS");
+        parentX05S.removeChild(childX05S);
+    }
+    if ($("#tablex1AttacksS").length > 0) {
+        var parentX1S = document.getElementById("x1AttacksS");
+        var childX1S = document.getElementById("tablex1AttacksS");
+        parentX1S.removeChild(childX1S);
+    }
+    if ($("#tablex2AttacksS").length > 0) {
+        var parentX2S = document.getElementById("x2AttacksS");
+        var childX2S = document.getElementById("tablex2AttacksS");
+        parentX2S.removeChild(childX2S);
+    }
+    if ($("#tablex4AttacksS").length > 0) {
+        var parentX4S = document.getElementById("x4AttacksS");
+        var childX4S = document.getElementById("tablex4AttacksS");
+        parentX4S.removeChild(childX4S);
+    }
     if ($("#tablex0Attacks").length > 0) {
         var parentX0 = document.getElementById("x0Attacks");
         var childX0 = document.getElementById("tablex0Attacks");
@@ -77,7 +107,6 @@ function clearPokemonInfo() {
         var childX4 = document.getElementById("tablex4Attacks");
         parentX4.removeChild(childX4);
     }
-
 }
 
 function pokemonInfo() {
@@ -121,6 +150,108 @@ function pokemonInfo() {
         multiplierAttacks = factor;
     } else {
         multiplierAttacks = multiplierAttacks[0];
+    }
+    //Find x0 Standart Attacks
+    if ($("#x0CheckS").prop('checked')) {
+        var enable = false;
+        $("#x0AttacksS").show();
+        for (var i = 0; i < multiplierAttacks.length; i++) {
+            if (multiplierAttacks[i] === 0)
+                enable = true;
+        }
+        if (enable === true) {
+            $("#noX0S").hide();
+            createAttacksTable(0, multiplierAttacks, attackDexStandart, "x0AttacksS");
+        } else {
+            $("#noX0S").show();
+        }
+    } else {
+        $("#x0AttacksS").hide();
+    }
+    //Find x0.25 Standart Attacks
+    if ($("#x025CheckS").prop('checked')) {
+        var enable = false;
+        $("#x025AttacksS").show();
+        for (var i = 0; i < multiplierAttacks.length; i++) {
+            if (multiplierAttacks[i] === 0.25)
+                enable = true;
+        }
+        if (enable === true) {
+            $("#noX025S").hide();
+            createAttacksTable(0.25, multiplierAttacks, attackDexStandart, "x025AttacksS");
+        } else {
+            $("#noX025S").show();
+        }
+    } else {
+        $("#x025AttacksS").hide();
+    }
+    //Find x0.5 Standart Attacks
+    if ($("#x05CheckS").prop('checked')) {
+        var enable = false;
+        $("#x05AttacksS").show();
+        for (var i = 0; i < multiplierAttacks.length; i++) {
+            if (multiplierAttacks[i] === 0.5)
+                enable = true;
+        }
+        if (enable === true) {
+            $("#noX05S").hide();
+            createAttacksTable(0.5, multiplierAttacks, attackDexStandart, "x05AttacksS");
+        } else {
+            $("#noX05S").show();
+        }
+    } else {
+        $("#x05AttacksS").hide();
+    }
+    //Find x1 Standart Attacks
+    if ($("#x1CheckS").prop('checked')) {
+        var enable = false;
+        $("#x1AttacksS").show();
+        for (var i = 0; i < multiplierAttacks.length; i++) {
+            if (multiplierAttacks[i] === 1)
+                enable = true;
+        }
+        if (enable === true) {
+            $("#noX1S").hide();
+            createAttacksTable(1, multiplierAttacks, attackDexStandart, "x1AttacksS");
+        } else {
+            $("#noX1S").show();
+        }
+    } else {
+        $("#x1AttacksS").hide();
+    }
+    //Find x2 Standart Attacks
+    if ($("#x2CheckS").prop('checked')) {
+        var enable = false;
+        $("#x2AttacksS").show();
+        for (var i = 0; i < multiplierAttacks.length; i++) {
+            if (multiplierAttacks[i] === 2)
+                enable = true;
+        }
+        if (enable === true) {
+            $("#noX2S").hide();
+            createAttacksTable(2, multiplierAttacks, attackDexStandart, "x2AttacksS");
+        } else {
+            $("#noX2S").show();
+        }
+    } else {
+        $("#x2AttacksS").hide();
+    }
+    //Find x4 Standart Attacks
+    if ($("#x4CheckS").prop('checked')) {
+        var enable = false;
+        $("#x4AttacksS").show();
+        for (var i = 0; i < multiplierAttacks.length; i++) {
+            if (multiplierAttacks[i] === 4)
+                enable = true;
+        }
+        if (enable === true) {
+            $("#noX4S").hide();
+            createAttacksTable(4, multiplierAttacks, attackDexStandart, "x4AttacksS");
+        } else {
+            $("#noX4S").show();
+        }
+    } else {
+        $("#x4AttacksS").hide();
     }
     //Find x0 Ultimate Attacks
     if ($("#x0Check").prop('checked')) {

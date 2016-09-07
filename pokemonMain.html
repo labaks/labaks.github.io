@@ -15,6 +15,33 @@
         <div class="ui-widget">
             <input id="inputPokemonName" type="text" name="pokemonName"/>
         </div>
+        <p>Показать стандартные атаки наносящие * урона</p>
+        <ul>
+            <li>
+                <label for="x0CheckS">x0</label>
+                <input id="x0CheckS" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x025CheckS">x0.25</label>
+                <input id="x025CheckS" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x05CheckS">x0.5</label>
+                <input id="x05CheckS" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x1CheckS">x1</label>
+                <input id="x1CheckS" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x2CheckS">x2</label>
+                <input id="x2CheckS" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x4CheckS">x4</label>
+                <input id="x4CheckS" type="checkbox"/>
+            </li>
+        </ul>
         <p>Показать супер атаки наносящие * урона</p>
         <ul>
             <li>
@@ -52,6 +79,30 @@
         <div id="standartAttacks"></div>
         <p>Супер Атаки:</p>
         <div id="ultimateAttacks"></div>
+        <div id="x0AttacksS" style="display: none;">
+            <p>Стандартные атаки, наносящие х0 урона этом покемону:</p>
+            <p id="noX0S" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x025AttacksS" style="display: none;">
+            <p>Стандартные атаки, наносящие х0.25 урона этом покемону:</p>
+            <p id="noX025S" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x05AttacksS" style="display: none;">
+            <p>Стандартные атаки, наносящие х0.5 урона этом покемону:</p>
+            <p id="noX05S" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x1AttacksS" style="display: none;">
+            <p>Стандартные атаки, наносящие х1 урона этом покемону:</p>
+            <p id="noX1S" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x2AttacksS" style="display: none;">
+            <p>Стандартные атаки, наносящие х2 урона этом покемону:</p>
+            <p id="noX2S" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x4AttacksS" style="display: none;">
+            <p>Стандартные атаки, наносящие х4 урона этому покемону:</p>
+            <p id="noX4S" style="display: none;">Нет таких атак</p>
+        </div>
         <div id="x0Attacks" style="display: none;">
             <p>Супер атаки, наносящие х0 урона этом покемону:</p>
             <p id="noX0" style="display: none;">Нет таких атак</p>
