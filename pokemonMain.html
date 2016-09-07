@@ -13,17 +13,68 @@
     </head>
     <body>
         <div class="ui-widget">
-            <input id="input" type="text" name="two"/>
+            <input id="inputPokemonName" type="text" name="pokemonName"/>
             <button onclick="pokemonInfo();">find</button>
         </div>
+        <p>Показать супер атаки наносящие * урона</p>
+        <ul>
+            <li>
+                <label for="x0Check">x0</label>
+                <input id="x0Check" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x025Check">x0.25</label>
+                <input id="x025Check" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x05Check">x0.5</label>
+                <input id="x05Check" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x1Check">x1</label>
+                <input id="x1Check" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x2Check">x2</label>
+                <input id="x2Check" type="checkbox"/>
+            </li>
+            <li>
+                <label for="x4Check">x4</label>
+                <input id="x4Check" type="checkbox"/>
+            </li>
+        </ul>
         <p id="name"></p>
-        <span>Type: </span><span id="type"></span>
+        <span>Тип: </span><span id="type"></span>
         <br/>
         <span>Max CP: </span><span id="maxCp"></span>
         <br/>
-        <p>Standart Attacks:</p>
+        <p>Стандартные Атаки:</p>
         <div id="standartAttacks"></div>
-        <p>Ultimate Attacks:</p>
+        <p>Супер Атаки:</p>
         <div id="ultimateAttacks"></div>
+        <div id="x0Attacks" style="display: none;">
+            <p>Супер атаки, наносящие х0 урона этом покемону:</p>
+            <p id="noX0" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x025Attacks" style="display: none;">
+            <p>Супер атаки, наносящие х0.25 урона этом покемону:</p>
+            <p id="noX025" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x05Attacks" style="display: none;">
+            <p>Супер атаки, наносящие х0.5 урона этом покемону:</p>
+            <p id="noX05" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x1Attacks" style="display: none;">
+            <p>Супер атаки, наносящие х1 урона этом покемону:</p>
+            <p id="noX1" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x2Attacks" style="display: none;">
+            <p>Супер атаки, наносящие х2 урона этом покемону:</p>
+            <p id="noX2" style="display: none;">Нет таких атак</p>
+        </div>
+        <div id="x4Attacks" style="display: none;">
+            <p>Супер атаки, наносящие х4 урона этому покемону:</p>
+            <p id="noX4" style="display: none;">Нет таких атак</p>
+        </div>
     </body>
 </html>
