@@ -393,6 +393,15 @@ function findRepetition(array) {
     return Object.keys(moreThanOne);
 }
 
+function findUnique(array) {
+    var obj = {};
+    for (var i = 0; i < array.length; i++) {
+        var str = array[i];
+        obj[str] = true;
+    }
+    return Object.keys(obj);
+}
+
 function findPokemonById(id) {
     for (var i = 0; i < base.length; i++) {
         if (base[i].id === id) {
@@ -421,14 +430,24 @@ function createAttacksTable(multiplier, multiplierArray, dex, containerId) {
         }
     }
     var xAttacks = [];
+    var pokemons = [];
     for (var i = 0; i < xTypes.length; i++) {
         for (var j = 0; j < dex.length; j++) {
             if (xTypes[i] === dex[j].type) {
                 var attack = [dex[j].name, dex[j].damage, findPokemonsByNameWithAttack(j, dex)];
+                pokemons = pokemons.concat(findPokemonsByNameWithAttack(j, dex));
                 xAttacks.push(attack);
             }
         }
     }
+    pokemons = findUnique(pokemons);
+    for (var i = 0; i < xAttacks.length; i++) {
+        for (var j = 0; j < pokemons.length; j++) {
+            if()
+        }
+    }
+    console.log(pokemons);
+    console.log(xAttacks);
     createTable(xAttacks[0].length, containerId, xAttacks);
 }
 
