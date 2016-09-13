@@ -443,7 +443,6 @@ function createAttacksTable(multiplier, multiplierArray, dex, containerId) {
     pokemons = findUnique(pokemons);
     for (var i = 0; i < xAttacks.length; i++) {
         for (var j = 0; j < pokemons.length; j++) {
-            if()
         }
     }
     console.log(pokemons);
