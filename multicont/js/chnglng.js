@@ -1,26 +1,31 @@
 document.addEventListener("DOMContentLoaded", checkLng);
 
+var cookiesName = 'mult_lng';
+var attrName = 'data-multilang';
+var activeBtnClass = "activeLng";
+var lngBtn = ".languages button";
+
 function checkLng() {
-    if ($.cookie('mult_lng')) {
-        changeLng($.cookie('mult_lng'));
-        $(".languages button").each(function () {
-            $(this).removeClass("activeLng");
+    if ($.cookie(cookiesName)) {
+        changeLng($.cookie(cookiesName));
+        $(lngBtn).each(function () {
+            $(this).removeClass(activeBtnClass);
         });
-        $("#" + $.cookie('mult_lng')).addClass("activeLng");
-        console.log($.cookie('mult_lng'));
+        $("#" + $.cookie(cookiesName)).addClass(activeBtnClass);
+        console.log($.cookie(cookiesName));
     }
 }
 
 function onChangeLng(e) {
-    if ($.cookie('mult_lng') !== e.id) {
-        $.cookie('mult_lng', e.id);
+    if ($.cookie(cookiesName) !== e.id) {
+        $.cookie(cookiesName, e.id);
     }
-    changeLng($.cookie('mult_lng'));
-//    changeLng(e.id);
-    $(".languages button").each(function () {
-        $(this).removeClass("activeLng");
+//    changeLng($.cookie(cookiesName));
+    changeLng(e.id);
+    $(lngBtn).each(function () {
+        $(this).removeClass(activeBtnClass);
     });
-    $(e).addClass("activeLng");
+    $(e).addClass(activeBtnClass);
 }
 
 function changeLng(lng) {
@@ -40,8 +45,8 @@ function changeLng(lng) {
 }
 
 function replacementWords(obj) {
-    $('[multilang]').each(function () {
-        $(this).html(obj[$(this).attr('multilang')]);
+    $('[' + attrName + ']').each(function () {
+        $(this).html(obj[$(this).attr(attrName)]);
     });
 }
 
