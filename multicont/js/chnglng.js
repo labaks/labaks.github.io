@@ -20,8 +20,8 @@ function onChangeLng(e) {
     if ($.cookie(cookiesName) !== e.id) {
         $.cookie(cookiesName, e.id);
     }
-//    changeLng($.cookie(cookiesName));
-    changeLng(e.id);
+    changeLng($.cookie(cookiesName));
+//    changeLng(e.id);
     $(lngBtn).each(function () {
         $(this).removeClass(activeBtnClass);
     });
