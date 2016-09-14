@@ -17,12 +17,12 @@
                 <table class="contacts">
                     <tr>
                         <td><i class="phoneIcon"></i></td>
-                        <td>Телефон:</td>
+                        <td multilang="phone">Телефон:</td>
                         <td>(048) 777 37 45</td>
                     </tr>
                     <tr>
                         <td><i class="faxIcon"></i></td>
-                        <td>Факс:</td>
+                        <td multilang="fax">Факс:</td>
                         <td>(048) 777 37 46</td>
                     </tr>
                     <tr>
@@ -31,25 +31,26 @@
                         <td>multicont@multicont.com.ua</td>
                     </tr>
                 </table>
-                <div>
-                    <button id="ru" onclick="changeLng(this)">ru</button>
-                    <button id="en" onclick="changeLng(this)">en</button>
+                <div class="languages">
+                    <button id="ru" class="activeLng" onclick="onChangeLng(this)">ru</button>
+                    <button id="en" onclick="onChangeLng(this)">en</button>
+                    <button id="ua" onclick="onChangeLng(this)">ua</button>
                 </div>
             </div>
             <ul class="main-nav">
-                <li><a href="#" multilang>Главная</a></li>
-                <li><a href="#">О наc</a></li>
-                <li><a href="#">Услуги</a>
+                <li><a href="#" multilang="main">Главная</a></li>
+                <li><a href="#" multilang="about_us">О наc</a></li>
+                <li><a href="#" multilang="services">Услуги</a>
                     <ul class="inside">
-                        <li><a href="#">Экспедиторские услуги</a></li>
-                        <li><a href="#">Таможенно-брокерские услуги</a></li>
-                        <li><a href="#">Логистика</a></li>
-                        <li><a href="#">Торгово-брокерские услуги (ВЭД)</a></li>
-                        <li><a href="#">Профессиональный перевод документов</a></li>
-                        <li><a href="#">Фрахтование</a></li>
+                        <li><a href="#" multilang="forwarding_services">Экспедиторские услуги</a></li>
+                        <li><a href="#" multilang="customs_brokerage_services">Таможенно-брокерские услуги</a></li>
+                        <li><a href="#" multilang="logistics">Логистика</a></li>
+                        <li><a href="#" multilang="commerce_brokerage_services">Торгово-брокерские услуги (ВЭД)</a></li>
+                        <li><a href="#" multilang="professional_translation_of_documents">Профессиональный перевод документов</a></li>
+                        <li><a href="#" multilang="affreightment">Фрахтование</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#" multilang="contacts">Контакты</a></li>
             </ul>
             <div id="content">
                 <div class="map"> 
@@ -58,29 +59,29 @@
             </div>
             <div id="footer">
                 <ul class="main-nav">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">О наc</a></li>
-                    <li><a href="#">Услуги</a>
+                    <li><a href="#" multilang="main">Главная</a></li>
+                    <li><a href="#" multilang="about_us">О наc</a></li>
+                    <li><a href="#" multilang="services">Услуги</a>
                         <ul class="inside">
-                            <li><a href="#">Экспедиторские услуги</a></li>
-                            <li><a href="#">Таможенно-брокерские услуги</a></li>
-                            <li><a href="#">Логистика</a></li>
-                            <li><a href="#">Торгово-брокерские услуги (ВЭД)</a></li>
-                            <li><a href="#">Профессиональный перевод документов</a></li>
-                            <li><a href="#">Фрахтование</a></li>
+                            <li><a href="#" multilang="forwarding_services">Экспедиторские услуги</a></li>
+                            <li><a href="#" multilang="customs_brokerage_services">Таможенно-брокерские услуги</a></li>
+                            <li><a href="#" multilang="logistics">Логистика</a></li>
+                            <li><a href="#" multilang="commerce_brokerage_services">Торгово-брокерские услуги (ВЭД)</a></li>
+                            <li><a href="#" multilang="professional_translation_of_documents">Профессиональный перевод документов</a></li>
+                            <li><a href="#" multilang="affreightment">Фрахтование</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" multilang="contacts">Контакты</a></li>
                 </ul>
                 <table class="contacts">
                     <tr>
                         <td><i class="phoneIcon"></i></td>
-                        <td>Телефон:</td>
+                        <td multilang="phone">Телефон:</td>
                         <td>(048) 777 37 45</td>
                     </tr>
                     <tr>
                         <td><i class="faxIcon"></i></td>
-                        <td>Факс:</td>
+                        <td multilang="fax">Факс:</td>
                         <td>(048) 777 37 46</td>
                     </tr>
                     <tr>
@@ -89,7 +90,7 @@
                         <td>multicont@multicont.com.ua</td>
                     </tr>
                 </table>
-                <p class="copyright">&copy; Логистическая компания "Multicont, Одесса"</p>
+                <p class="copyright" multilang="copyright">&copy; Логистическая компания "Multicont, Одесса"</p>
                 <div id="scrollup"></div>
             </div>
         </div>
