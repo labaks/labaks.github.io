@@ -173,9 +173,51 @@ ul, li, dl, dd, dt {
     color: #fff;
 }
 #content {
+    padding-top: calc(56.25vw - 278px);
+}
+.ourOffers, .members {
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    background: rgba(36, 82, 127, .8);
+    color: white;
+    margin: 0;
+    padding: 20px 0;
+}
+.offersWrapper {
+    padding: 20px 20%;
+}
+.offersBlock {
+    width: 33%;
+    display: inline-block;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.offersBlock img, .membersBlock img {
+    width: 70%;
+    margin-bottom: 25px;
+}
+.offersBlock p {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+.members {
+    margin-bottom: 20px;
+}
+.membersBlock {
+    width: 25%;
+    display: inline-block;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.membersBlockFirst {
+    margin-left: 25%;
 }
 .map {
-    margin-top: calc(56.25vw - 202px);
 }
 #footer {
     background: #464646;
