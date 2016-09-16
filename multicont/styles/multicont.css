@@ -175,7 +175,7 @@ ul, li, dl, dd, dt {
 #content {
     padding-top: calc(56.25vw - 278px);
 }
-.ourOffers, .members {
+.ourOffers, .members, .honors, .partners {
     text-align: center;
     font-size: 40px;
     line-height: 40px;
@@ -184,38 +184,64 @@ ul, li, dl, dd, dt {
     margin: 0;
     padding: 20px 0;
 }
-.offersWrapper {
+.offersWrapper, .honorsWrapper, .partnersWrapper {
     padding: 20px 20%;
 }
-.offersBlock {
+.offersBlock, .honorsBlock {
     width: 33%;
     display: inline-block;
     padding: 0 20px;
     box-sizing: border-box;
     text-align: center;
 }
-.offersBlock img, .membersBlock img {
+.offersBlock img, .membersBlock img, .honorsBlock img, .partnersBlock img {
     width: 70%;
     margin-bottom: 25px;
 }
-.offersBlock p {
+.offersBlock p, .partnersBlock p {
     font-size: 16px;
     line-height: 16px;
     font-weight: bold;
     margin: 0;
 }
-.members {
+.members, .honors, .partners {
     margin-bottom: 20px;
 }
-.membersBlock {
+.membersBlock, .partnersBlock {
     width: 25%;
     display: inline-block;
     padding: 0 20px;
     box-sizing: border-box;
     text-align: center;
 }
-.membersBlockFirst {
+.membersBlockFirst, .partnersBlockFirst {
     margin-left: 25%;
+}
+.honorsBlock {
+    vertical-align: middle;
+}
+.carousel {
+    width: 60%;
+    margin: 20px auto;
+    height: 170px;
+}
+.carousel .slick-slide {
+    width: 20%;
+    vertical-align: middle;
+}
+.carousel div img {
+    width: 70%;
+}
+.carousel button {
+    background-size: contain;
+}
+.slick-next {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: 60px;
 }
 .map {
 }

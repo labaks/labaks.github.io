@@ -26,3 +26,11 @@ window.onload = function () { // после загрузки страницы
         }
     };
 };
+$(document).ready(function(){
+  $('.carousel').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1500
+  });
+});
