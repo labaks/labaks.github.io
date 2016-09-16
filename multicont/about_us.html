@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Multicont</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <script type='text/javascript' src='js/script.js'></script>
+        <script type='text/javascript' src='js/jquery.cookie.js'></script>
+        <script type='text/javascript' src='js/chnglng.js'></script>
+        <link rel="stylesheet" href="styles/multicont.css">
+    </head>
+    <body>
+        <div class="wrapperOther">
+            <div class="headerWrapper">
+                <div id="header">
+                    <strong class="logo"><a href="index.html">multicont</a></strong>
+                    <table class="contacts">
+                        <tr>
+                            <td><i class="phoneIcon"></i></td>
+                            <td data-multilang="phone">Телефон:</td>
+                            <td>(048) 777 37 45</td>
+                        </tr>
+                        <tr>
+                            <td><i class="faxIcon"></i></td>
+                            <td data-multilang="fax">Факс:</td>
+                            <td>(048) 777 37 46</td>
+                        </tr>
+                        <tr>
+                            <td><i class="mailIcon"></i></td>
+                            <td>E-mail:</td>
+                            <td>multicont@multicont.com.ua</td>
+                        </tr>
+                    </table>
+                    <div class="languages">
+                        <button id="ru" class="activeLng" onclick="onChangeLng(this)">ru</button>
+                        <button id="en" onclick="onChangeLng(this)">en</button>
+                        <button id="ua" onclick="onChangeLng(this)">ua</button>
+                    </div>
+                </div>
+            </div>
+            <ul class="main-nav">
+                <li><a href="index.html" data-multilang="main">Главная</a></li>
+                <li><a href="about_us.html" data-multilang="about_us">О наc</a></li>
+                <li><a href="#" data-multilang="services">Услуги</a>
+                    <ul class="inside">
+                        <li><a href="#" data-multilang="forwarding_services">Экспедиторские услуги</a></li>
+                        <li><a href="#" data-multilang="customs_brokerage_services">Таможенно-брокерские услуги</a></li>
+                        <li><a href="#" data-multilang="logistics">Логистика</a></li>
+                        <li><a href="#" data-multilang="commerce_brokerage_services">Торгово-брокерские услуги (ВЭД)</a></li>
+                        <li><a href="#" data-multilang="professional_translation_of_documents">Профессиональный перевод документов</a></li>
+                        <li><a href="#" data-multilang="affreightment">Фрахтование</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-multilang="contacts">Контакты</a></li>
+            </ul>
+            <div id="content">
+                <p class="title" data-multilang="about_us">О нас</p>
+                <p data-multilang="about_us_text1">Логистическая компания Мультиконт Одесса предоставляет широкий спектр услуг и консалтинга в сфере организации международной морской доставки грузов: морские контейнерные перевозки, экспедирование в портах, таможенное оформление, фрахтование. Мы работаем напрямую с крупнейшими Альянсами судоходных компаний сферы контейнерных перевозок, а это означает -  безупречное качество оказываемых услуг и залог стабильности работы Вашего бизнеса.</p>
+                <p data-multilang="about_us_text2">Мультиконт Одесса имеет большие возможности предоставления морских логистических и экспедиторских услуг на территории Одесского, Черноморского, Южного портов, благодаря удобному расположению в Одессе и заключенным договорам с ними. Квалифицированный персонал компании в любой момент готов Вас персонально проконсультировать относительно вопросов: организации доставки груза, морских контейнерных перевозок, таможенного оформления (застаможки) Вашего груза, составить оптимальный логистический план с предварительными просчетами для каждого персонального клиента. Мы ценим своих клиентов и предоставляем услуги качественно и точно в срок. В работе с клиентами Мы всегда стремимся долгосрочному и взаимовыгодному сотрудничеству, предлагаем решения самых сложных задач в сфере организации доставки грузов.</p>
+                <p data-multilang="about_us_text3">Наша миссия - предоставление качественных и надежных услуг в сфере международных контейнерных перевозок на долгосрочной основе, решение логистических экспортных задач для удовлетворения потребностей клиента и функционирования его бизнеса.</p>
+                <p data-multilang="about_us_text4">«Мы не просто осуществляем перевозки, а оптимизируем логистику и предлагаем стратегию устойчивого развития перевозки, бизнеса наших клиентов»</p>
+                <p data-multilang="about_us_text5">Всегда рады сотрудничеству!</p>
+            </div>
+            <div id="footer">
+                <ul class="main-nav">
+                    <li><a href="index.html" data-multilang="main">Главная</a></li>
+                    <li><a href="about_us.html" data-multilang="about_us">О наc</a></li>
+                    <li><a href="#" data-multilang="services">Услуги</a>
+                        <ul class="inside">
+                            <li><a href="#" data-multilang="forwarding_services">Экспедиторские услуги</a></li>
+                            <li><a href="#" data-multilang="customs_brokerage_services">Таможенно-брокерские услуги</a></li>
+                            <li><a href="#" data-multilang="logistics">Логистика</a></li>
+                            <li><a href="#" data-multilang="commerce_brokerage_services">Торгово-брокерские услуги (ВЭД)</a></li>
+                            <li><a href="#" data-multilang="professional_translation_of_documents">Профессиональный перевод документов</a></li>
+                            <li><a href="#" data-multilang="affreightment">Фрахтование</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" data-multilang="contacts">Контакты</a></li>
+                </ul>
+                <table class="contacts">
+                    <tr>
+                        <td><i class="phoneIcon"></i></td>
+                        <td data-multilang="phone">Телефон:</td>
+                        <td>(048) 777 37 45</td>
+                    </tr>
+                    <tr>
+                        <td><i class="faxIcon"></i></td>
+                        <td data-multilang="fax">Факс:</td>
+                        <td>(048) 777 37 46</td>
+                    </tr>
+                    <tr>
+                        <td><i class="mailIcon"></i></td>
+                        <td>E-mail:</td>
+                        <td>multicont@multicont.com.ua</td>
+                    </tr>
+                </table>
+                <p class="copyright" data-multilang="copyright">&copy; Логистическая компания "Multicont, Одесса"</p>
+                <div id="scrollup"></div>
+            </div>
+        </div>
+    </body>
+</html>

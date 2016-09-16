@@ -35,10 +35,20 @@ ul, li, dl, dd, dt {
     margin: 0;
 }
 /* General settings */
-
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/3966.ttf);
+}
 .wrapper {
     background: url(../img/bg.png) no-repeat;
     background-size: 100%;
+}
+.wrapperOther {
+    background: url(../img/bgHead.png) no-repeat;
+    background-size: 100%;
+}
+.headerWrapper {
+    background: rgba(0, 0, 0, .4);
 }
 #header {
     width: 60%;
@@ -54,6 +64,7 @@ ul, li, dl, dd, dt {
     background-size: contain;
     width: 342px;
     height: 130px;
+    margin-top: 10px;
 }
 #header .logo a {
     display: block;
@@ -111,7 +122,7 @@ ul, li, dl, dd, dt {
     margin: 0;
     padding: 0 300px;
     background: rgba(189, 214, 238, .8);
-    box-shadow: 1px 1px 5px 3px rgba(0,0,0,.5)
+    box-shadow: 1px 1px 5px 3px rgba(0,0,0,.5);
 }
 .main-nav:after{
     clear: both;
@@ -172,8 +183,19 @@ ul, li, dl, dd, dt {
     background: #1f4e79;
     color: #fff;
 }
-#content {
+#content.mainContent {
     padding-top: calc(56.25vw - 278px);
+}
+.wrapperOther #content {
+    background: white;
+    padding: 20px 20% 40px;
+    font: 20px/26px Roboto;
+    text-align: justify;
+}
+.wrapperOther #content .title {
+    color: #3d6df9;
+    font-size: 30px;
+    line-height: 36px;
 }
 .ourOffers, .members, .honors, .partners {
     text-align: center;

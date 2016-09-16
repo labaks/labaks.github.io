@@ -15,34 +15,36 @@
     </head>
     <body>
         <div class="wrapper">
-            <div id="header">
-                <strong class="logo"><a href="#">multicont</a></strong>
-                <table class="contacts">
-                    <tr>
-                        <td><i class="phoneIcon"></i></td>
-                        <td data-multilang="phone">Телефон:</td>
-                        <td>(048) 777 37 45</td>
-                    </tr>
-                    <tr>
-                        <td><i class="faxIcon"></i></td>
-                        <td data-multilang="fax">Факс:</td>
-                        <td>(048) 777 37 46</td>
-                    </tr>
-                    <tr>
-                        <td><i class="mailIcon"></i></td>
-                        <td>E-mail:</td>
-                        <td>multicont@multicont.com.ua</td>
-                    </tr>
-                </table>
-                <div class="languages">
-                    <button id="ru" class="activeLng" onclick="onChangeLng(this)">ru</button>
-                    <button id="en" onclick="onChangeLng(this)">en</button>
-                    <button id="ua" onclick="onChangeLng(this)">ua</button>
+            <div class="headerWrapper">
+                <div id="header">
+                    <strong class="logo"><a href="index.html">multicont</a></strong>
+                    <table class="contacts">
+                        <tr>
+                            <td><i class="phoneIcon"></i></td>
+                            <td data-multilang="phone">Телефон:</td>
+                            <td>(048) 777 37 45</td>
+                        </tr>
+                        <tr>
+                            <td><i class="faxIcon"></i></td>
+                            <td data-multilang="fax">Факс:</td>
+                            <td>(048) 777 37 46</td>
+                        </tr>
+                        <tr>
+                            <td><i class="mailIcon"></i></td>
+                            <td>E-mail:</td>
+                            <td>multicont@multicont.com.ua</td>
+                        </tr>
+                    </table>
+                    <div class="languages">
+                        <button id="ru" class="activeLng" onclick="onChangeLng(this)">ru</button>
+                        <button id="en" onclick="onChangeLng(this)">en</button>
+                        <button id="ua" onclick="onChangeLng(this)">ua</button>
+                    </div>
                 </div>
             </div>
             <ul class="main-nav">
-                <li><a href="#" data-multilang="main">Главная</a></li>
-                <li><a href="#" data-multilang="about_us">О наc</a></li>
+                <li><a href="index.html" data-multilang="main">Главная</a></li>
+                <li><a href="about_us.html" data-multilang="about_us">О наc</a></li>
                 <li><a href="#" data-multilang="services">Услуги</a>
                     <ul class="inside">
                         <li><a href="#" data-multilang="forwarding_services">Экспедиторские услуги</a></li>
@@ -55,7 +57,7 @@
                 </li>
                 <li><a href="#" data-multilang="contacts">Контакты</a></li>
             </ul>
-            <div id="content">
+            <div id="content" class="mainContent">
                 <div>
                     <p class="ourOffers" data-multilang="our_offers">Наши предложения</p>
                     <div class="offersWrapper">
@@ -139,8 +141,8 @@
             </div>
             <div id="footer">
                 <ul class="main-nav">
-                    <li><a href="#" data-multilang="main">Главная</a></li>
-                    <li><a href="#" data-multilang="about_us">О наc</a></li>
+                    <li><a href="index.html" data-multilang="main">Главная</a></li>
+                    <li><a href="about_us.html" data-multilang="about_us">О наc</a></li>
                     <li><a href="#" data-multilang="services">Услуги</a>
                         <ul class="inside">
                             <li><a href="#" data-multilang="forwarding_services">Экспедиторские услуги</a></li>
