@@ -240,12 +240,14 @@ ul, li, dl, dd, dt {
 .offersWrapper, .honorsWrapper, .partnersWrapper {
     padding: 20px 20%;
 }
-.offersBlock, .honorsBlock {
-    width: 33%;
+.offersBlock, .membersBlock, .partnersBlock, .honorsBlock {
     display: inline-block;
     padding: 0 20px;
     box-sizing: border-box;
     text-align: center;
+}
+.offersBlock {
+    width: 33%;
 }
 .offersBlock img, .membersBlock img, .honorsBlock img, .partnersBlock img {
     width: 70%;
@@ -260,14 +262,10 @@ ul, li, dl, dd, dt {
 .members, .honors, .partners {
     margin-bottom: 20px;
 }
-.membersBlock, .partnersBlock {
+.membersBlock, .partnersBlock, .honorsBlock {
     width: 25%;
-    display: inline-block;
-    padding: 0 20px;
-    box-sizing: border-box;
-    text-align: center;
 }
-.membersBlockFirst, .partnersBlockFirst {
+.blockFirst {
     margin-left: 25%;
 }
 .honorsBlock {
