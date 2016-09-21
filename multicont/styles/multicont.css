@@ -105,17 +105,48 @@ ul, li, dl, dd, dt {
     top: 10px;
     right: 10px;
 }
+.languages span {
+    font-size: 14px;
+    color: white;
+    display: block;
+    text-align: right;
+    margin: 0 5px 5px 0;
+}
 .languages button {
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
     border: 2px solid rgb(36, 82, 127);
-    border-radius: 5px;
-    background: rgba(189, 214, 238, .8);
-    color: black;
-    font-size: 16px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.languages button:before {
+    display: block;
+    content: '';
+    position: absolute;
+    background: black;
+    opacity: .3;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+}
+#ru {
+    background: url(../img/ru.png) 100% 50% no-repeat;
+}
+#ua {
+    background: url(../img/ua.png) 100% 50% no-repeat;
+}
+#en {
+    background: url(../img/en.png) 50% 50% no-repeat;
 }
 .languages button:hover, .languages .activeLng {
     border: 2px solid rgb(0, 44, 86);
-    background: rgb(36, 82, 127);
     color: white;
+}
+.languages button:hover:before, .languages .activeLng:before {
+    opacity: 0;
 }
 .main-nav {
     list-style: none;
