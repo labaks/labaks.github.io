@@ -324,3 +324,68 @@ ul, li, dl, dd, dt {
     height: 60px;
     background-size: 100%;
 }
+
+@media only screen and (max-width: 1280px) {
+    .contacts {
+        margin-left: 10px;
+    }
+    .contacts td {
+        padding: 5px 2px;
+    }
+}
+@media only screen and (max-width: 1180px) {
+    #header .logo {
+        width: 280px;
+        height: 90px;
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 1120px) {
+    .offersWrapper, .honorsWrapper, .partnersWrapper {
+        padding: 20px 15%;
+    }
+}
+@media only screen and (max-width: 1070px) {
+    #header {
+        position: static;
+    }
+    .languages {
+        right: 3%;
+    }
+}
+@media only screen and (max-width: 1030px) {
+    #header {
+        width: 70%;
+    }
+    .main-nav {
+        padding: 0 20%;
+    }
+}
+@media only screen and (max-width: 970px) {
+    .offersWrapper, .honorsWrapper, .partnersWrapper {
+        padding: 20px 5%;
+    }
+    .blockFirst {
+        margin-left: 5%;
+    }
+    .membersBlock, .partnersBlock, .honorsBlock {
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 910px) {
+    #header {
+        height: 105px;
+    }
+    #header .logo {
+        margin-top: 10px;
+    }
+    .contacts {
+        margin: 10px 0 0 5px;
+    }
+    .contacts td {
+        padding: 2px;
+    }
+    #content.mainContent {
+        padding-top: calc(56.25vw - 234px);
+    }
+}
