@@ -189,11 +189,11 @@ ul, li, dl, dd, dt {
     padding: 0;
     position: relative;
 }
-.main-nav li a {
+.main-nav li a, .services {
     color: #343449;
     padding: 16px;
 }
-.main-nav li a:hover {
+.main-nav li a:hover, .services:hover {
     color: #fff;
     background: #1f4e79;
     text-shadow: none;
@@ -463,7 +463,7 @@ ul, li, dl, dd, dt {
         float: none;
         line-height: 16px;
     }
-    .main-nav li a {
+    .main-nav li a, .services {
         display: block;
     }
     .collapsedMenu {
