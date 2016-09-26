@@ -360,6 +360,9 @@ ul, li, dl, dd, dt {
         height: 90px;
         margin-top: 20px;
     }
+    .carousel {
+        width: 90%;
+    }
 }
 @media all and (max-width: 1120px) {
     .offersWrapper, .honorsWrapper, .partnersWrapper {
@@ -486,5 +489,48 @@ ul, li, dl, dd, dt {
         background: rgba(189, 214, 238, 1);
         z-index: 1;
         box-shadow: 1px 1px 2px 1px rgba(0,0,0,.5);
+    }
+}
+@media all and (max-width: 770px) {
+    .offersWrapper, .honorsWrapper, .partnersWrapper {
+        padding: 20px 0;
+    }
+    .offersBlock, .membersBlock, .partnersBlock, .honorsBlock {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .blockFirst {
+        margin-left: 0;
+    }
+}
+@media all and (max-width: 520px) {
+    .languages {
+        top: 0;
+        right: 5px;
+    }
+    .languages button {
+        display: block;
+    }
+}
+@media all and (max-width: 420px) {
+    #header .logo {
+        background: url(../img/mini-logo.png) no-repeat;
+        background-size: contain;
+    }
+    .languages {
+        top: 57px;
+    }
+    .languages button {
+        display: inline-block;
+    }
+    .collapsedMenu {
+        height: 30px;
+        width: 30px;
+        top: 57px;
+        left: 5px;
+    }
+    .collapsedMenu:before {
+        font-size: 30px;
+        line-height: 30px;
     }
 }
