@@ -39,6 +39,24 @@ ul, li, dl, dd, dt {
     font-family: Roboto;
     src: url(../fonts/3966.ttf);
 }
+@font-face {
+    font-family: "Material-Design-Icons";
+    src: url("../fonts/Material-Design-Icons.eot?-g7cqhn");
+    src: url("../fonts/Material-Design-Icons.eot?#iefix-g7cqhn") format("embedded-opentype"), url("../fonts/Material-Design-Icons.woff?-g7cqhn") format("woff"), url("../fonts/Material-Design-Icons.ttf?-g7cqhn") format("truetype"), url("../fonts/Material-Design-Icons.svg?-g7cqhn#Material-Design-Icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.collapsedMenu:before {
+    font-family: "Material-Design-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .wrapper {
     background: url(../img/bg.png) no-repeat;
     background-size: 100%;
@@ -148,6 +166,9 @@ ul, li, dl, dd, dt {
 .languages button:hover:before, .languages .activeLng:before {
     opacity: 0;
 }
+.collapsedMenu {
+    display: none;
+}
 .main-nav {
     list-style: none;
     margin: 0;
@@ -155,7 +176,7 @@ ul, li, dl, dd, dt {
     background: rgba(189, 214, 238, .8);
     box-shadow: 1px 1px 5px 3px rgba(0,0,0,.5);
 }
-.main-nav:after{
+.main-nav:after {
     clear: both;
     content: '';
     display: block;
@@ -393,5 +414,77 @@ ul, li, dl, dd, dt {
     }
     .main-nav {
         background: rgba(189, 214, 238, 1);
+    }
+}
+@media all and (max-width: 880px) {
+    .wrapper {
+        background: url(../img/bg.png) 0 90px no-repeat;
+        background-size: 100%;
+    }
+    .wrapperOther {
+        background: none;
+    }
+    .headerWrapper {
+        background: rgba(189, 214, 238, 1);
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    #header {
+        height: 90px;
+        width: 100%;
+    }
+    #header .contacts {
+        display: none;
+    }
+    .logo {
+        margin: 0 auto !important;
+        display: block;
+        float: none !important;
+    }
+    .languages span {
+        display: none;
+    }
+    #footer .main-nav {
+        display: none !important;
+    }
+    .main-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        display: none;
+        width: 40%;
+    }
+    .main-nav li {
+        float: none;
+        line-height: 16px;
+    }
+    .main-nav li a {
+        display: block;
+    }
+    .collapsedMenu {
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        left: 20px;
+        top: 10px;
+    }
+    .collapsedMenu:before {
+        content: '\e8a1';
+        font-size: 50px;
+        line-height: 50px;
+        color: rgba(36, 82, 127, .8)
+    }
+    #content.mainContent {
+        padding-top: calc(56.25vw - 89px);
+    }
+    .main-nav ul {
+        top: 10px;
+        left: 10px;
+        background: rgba(189, 214, 238, 1);
+        z-index: 1;
+        box-shadow: 1px 1px 2px 1px rgba(0,0,0,.5);
     }
 }

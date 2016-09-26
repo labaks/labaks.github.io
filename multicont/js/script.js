@@ -26,11 +26,18 @@ window.onload = function () { // после загрузки страницы
         }
     };
 };
-$(document).ready(function(){
-  $('.carousel').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1500
-  });
+$(document).ready(function () {
+    $('.carousel').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500
+    });
+});
+
+$(document).click(function (e) {
+    if ($(e.target).closest(".collapsedMenu").length)
+        $('.main-nav').show();
+    else
+        $(".main-nav").hide();
 });
