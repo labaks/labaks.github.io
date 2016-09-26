@@ -325,7 +325,7 @@ ul, li, dl, dd, dt {
     background-size: 100%;
 }
 
-@media only screen and (max-width: 1280px) {
+@media all and (max-width: 1280px) {
     .contacts {
         margin-left: 10px;
     }
@@ -333,19 +333,19 @@ ul, li, dl, dd, dt {
         padding: 5px 2px;
     }
 }
-@media only screen and (max-width: 1180px) {
+@media all and (max-width: 1180px) {
     #header .logo {
         width: 280px;
         height: 90px;
         margin-top: 20px;
     }
 }
-@media only screen and (max-width: 1120px) {
+@media all and (max-width: 1120px) {
     .offersWrapper, .honorsWrapper, .partnersWrapper {
         padding: 20px 15%;
     }
 }
-@media only screen and (max-width: 1070px) {
+@media all and (max-width: 1070px) {
     #header {
         position: static;
     }
@@ -353,7 +353,7 @@ ul, li, dl, dd, dt {
         right: 3%;
     }
 }
-@media only screen and (max-width: 1030px) {
+@media all and (max-width: 1030px) {
     #header {
         width: 70%;
     }
@@ -361,7 +361,7 @@ ul, li, dl, dd, dt {
         padding: 0 20%;
     }
 }
-@media only screen and (max-width: 970px) {
+@media all and (max-width: 970px) {
     .offersWrapper, .honorsWrapper, .partnersWrapper {
         padding: 20px 5%;
     }
@@ -372,7 +372,7 @@ ul, li, dl, dd, dt {
         width: 45%;
     }
 }
-@media only screen and (max-width: 910px) {
+@media all and (max-width: 910px) {
     #header {
         height: 105px;
     }
@@ -387,5 +387,11 @@ ul, li, dl, dd, dt {
     }
     #content.mainContent {
         padding-top: calc(56.25vw - 234px);
+    }
+    .wrapperOther #content {
+        padding: 0 3% 20px;
+    }
+    .main-nav {
+        background: rgba(189, 214, 238, 1);
     }
 }
