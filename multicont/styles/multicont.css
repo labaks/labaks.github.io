@@ -361,7 +361,7 @@ ul, li, dl, dd, dt {
         margin-top: 20px;
     }
     .carousel {
-        width: 90%;
+        width: 80%;
     }
 }
 @media all and (max-width: 1120px) {
@@ -502,6 +502,8 @@ ul, li, dl, dd, dt {
     .blockFirst {
         margin-left: 0;
     }
+}
+@media all and (max-width: 570px) {
 }
 @media all and (max-width: 520px) {
     .languages {

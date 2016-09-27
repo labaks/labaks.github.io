@@ -36,8 +36,12 @@ $(document).ready(function () {
 });
 
 $(document).click(function (e) {
-    if ($(e.target).closest(".collapsedMenu").length)
-        $('.main-nav').show();
-    else
-        $(".main-nav").hide();
+    if ($('.collapsedMenu').css('display') === 'block') {
+        console.log("collapsed block");
+        if ($(e.target).closest(".collapsedMenu").length)
+            $('.main-nav').show();
+        else
+            $(".main-nav").hide();
+    }
+
 });

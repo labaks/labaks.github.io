@@ -65,7 +65,11 @@ var langs = {
         "services_logistics": "Услуги: ЛОГИСТИКА",
         "logistic_text1": "Логистическая компания Мультиконт Одесса уже много лет лидирует на рынке транспортно-экспедиторских и логистических услуг, обеспечивая перевозку «от двери до двери» на любое расстояние. Мы уже накопили большое количество знаний и опыта в этой сфере, работаем только с проверенными транспортными компаниями и разработаем для вас индивидуальную выгодную схему доставки товара точно в срок при минимальных финансовых затратах. При этом мы гарантируем сохранность вашего груза и отсутствие простоев.",
         "problem_solution": "Проблема → Решение",
-        "logistic_text2": "Приведем наглядный пример. Предпринимателю необходимо отправить свой товар на экспорт, чтобы реализовывать его на мировом товарном рынке. Задача является комплексной: провести переговоры с судоходной линией о котируемой и конкурентной на рынке фрахтовой ставки, а также предусмотреть все последующие расходы, входящие в нее, далее необходимо оформить большое количество документов и сертификатов и произвести затамаживание груза, а также проконтролировать перевозку груза, чтобы уберечь его от повреждений и хищений, после этого доставить в порт и перевезти морским транспортом."
+        "logistic_text2": "Приведем наглядный пример. Предпринимателю необходимо отправить свой товар на экспорт, чтобы реализовывать его на мировом товарном рынке. Задача является комплексной: провести переговоры с судоходной линией о котируемой и конкурентной на рынке фрахтовой ставки, а также предусмотреть все последующие расходы, входящие в нее, далее необходимо оформить большое количество документов и сертификатов и произвести затамаживание груза, а также проконтролировать перевозку груза, чтобы уберечь его от повреждений и хищений, после этого доставить в порт и перевезти морским транспортом.",
+        "logistic_text3": "Сегодня мы готовы поделиться нашими секретами с вами.",
+        "logistic_text4": "Может это звучит как сенсация, но мы учим наших клиентов больше получать денег и меньше тратить их, т.к. прибыль не растет на деревьях, а образуется согласуясь с экономическими законами.",
+        "logistic_text5": "Для получения расчетов, стоимости и ставок, а также для консультации и аналитики, Вы можете обратиться со своей экспортной программой в логистический департамент:",
+        "logistic_text6": "Cтоянова Юлия Юрьевна – Менеджер по организации международных транспортных перевозок"
     },
     "en": {
         "main": "Home",
@@ -101,7 +105,11 @@ var langs = {
         "services_logistics": "Services: Logistics",
         "logistic_text1": "Logistics company Multicont Odessa for many years the market leader in freight forwarding and logistics services, providing transportation «from door to door» at any distance. We have accumulated a lot of knowledge and experience in this field, we work only with reliable transport companies and develop for you individual profitable scheme of delivery of the goods intime with minimal financial costs. At the same time, we guarantee the safety of your cargo, and no downtime.",
         "problem_solution": "Problem → Solution",
-        "logistic_text2": "Here is a vivid example. The entrepreneur needs to send the goods for export to sell it on the world commodity market. The task is complex: to negotiate with the shipping line of the quote and the competitive market freight rates, as well as provide all expenses that are included in it, then it is necessary to issue a large number of documents and certificates and make customs clearance of cargo, as well as control the shipping to save it from damage and theft, then delivered to the port and transported by sea."
+        "logistic_text2": "Here is a vivid example. The entrepreneur needs to send the goods for export to sell it on the world commodity market. The task is complex: to negotiate with the shipping line of the quote and the competitive market freight rates, as well as provide all expenses that are included in it, then it is necessary to issue a large number of documents and certificates and make customs clearance of cargo, as well as control the shipping to save it from damage and theft, then delivered to the port and transported by sea.",
+        "logistic_text3": "Today we are ready to share our secrets with you.",
+        "logistic_text4": "Maybe it sounds like a sensation, but we teach our clients to receive more money and spend less of their because profit does not grow on trees, and forms agreeing with economic laws.",
+        "logistic_text5": "For calculations of cost and rates, as well as consulting and analytics, you can refer to its export program in the logistics department:",
+        "logistic_text6": "Julia Stoyanova – Organization manager of the International transportation"
     },
     "ua": {
         "main": "Головна",
@@ -137,6 +145,10 @@ var langs = {
         "services_logistics": "Послуги: ЛОГІСТИКА",
         "logistic_text1": "Логістична компанія Мультиконт Одеса вже багато років лідирує на ринку транспортно-експедиторських та логістичних послуг, забезпечуючи перевезення «від дверей до дверей» на будь-яку відстань. Ми вже накопичили велику кількість знань та досвід у цій сфері, працюємо тільки з перевіреними транспортними компаніями і розробимо для вас індивідуальну вигідну схему доставки вантажу точно в строк при мінімальних фінансових витратах. При цьому ми гарантуємо збереження вашого вантажу і відсутність простоїв.",
         "problem_solution": "Проблема → Рішення",
-        "logistic_text2": "Наведемо наочний приклад. Підприємцю необхідно відправити свій товар на експорт, щоб реалізовувати його на світовому товарному ринку. Завдання є комплексним: провести переговори з судноплавної лінією, домовитися та прокотирувати конкурентну на ринку ставку фрахту, а також передбачити всі наступні витрати, що входять до неї, далі необхідно оформити велику кількість документів і сертифікатів і зробити замитнення вантажу, а також проконтролювати перевезення вантажу, щоб зберегти його від пошкоджень і розкрадань, після цього доставити до порту і перевезти морським транспортом."
+        "logistic_text2": "Наведемо наочний приклад. Підприємцю необхідно відправити свій товар на експорт, щоб реалізовувати його на світовому товарному ринку. Завдання є комплексним: провести переговори з судноплавної лінією, домовитися та прокотирувати конкурентну на ринку ставку фрахту, а також передбачити всі наступні витрати, що входять до неї, далі необхідно оформити велику кількість документів і сертифікатів і зробити замитнення вантажу, а також проконтролювати перевезення вантажу, щоб зберегти його від пошкоджень і розкрадань, після цього доставити до порту і перевезти морським транспортом.",
+        "logistic_text3": "Сьогодні ми готові поділитися нашими секретами з вами.",
+        "logistic_text4": "Може це звучить як сенсація, але ми вчимо наших клієнтів більше отримувати грошей і менше витрачати їх, тому що прибуток не росте на деревах, а утворюється узгоджуючи з економічними законами.",
+        "logistic_text5": "Для отримання розрахунків, вартості і ставок, а також для консультації і аналітики, Ви можете звернутися зі своєю експортною програмою в логістичний департамент:",
+        "logistic_text6": "Cтоянова Юлія Юріївна - Менеджер по організації міжнародних транспортних перевезень"
     }
 };
