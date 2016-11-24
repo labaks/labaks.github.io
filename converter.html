@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+</head>
+<body><input type="file"/>
+<div id="fileDisplayArea"></div>
+<script>
+document.querySelector( 'input' ).addEventListener( 'change', function invokeUpload(){
+  upload( this.files[ 0 ] );
+}, false );
+
+function upload(file) {
+
+  var imageType = /image.*/;
+
+  if (file.type.match(imageType)) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      fileDisplayArea.innerHTML = "";
+
+      var img = new Image();
+      img.src = reader.result;
+
+      fileDisplayArea.appendChild(img);
+
+      img.onload = function() {
+
+        var canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        var context = canvas.getContext("2d");
+
+        context.drawImage(img, 0, 0);
+
+        var a = document.createElement("a");
+        a.download = "image.png";
+        a.href = canvas.toDataURL("image/png");     
+        a.click();
+
+      };
+    }
+
+    reader.readAsDataURL(file); 
+  } else {
+    fileDisplayArea.innerHTML = "File not supported!"
+  }
+}
+</script>
+
+</body>
+</html>
