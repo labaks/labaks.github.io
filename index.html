@@ -4,7 +4,9 @@
 		<meta charset="UTF-8">
 		<title>Labaks page</title>
 		<link rel="stylesheet" href="styles/mainStyle.css">
+		<link rel="stylesheet" href="styles/timer.css">
 		<link rel="shortcut icon" href="img/mainIcon.ico" type="image/x-icon">
+		<script type="text/javascript" src="js/timer.js"></script>
 	</head>
 	<body>
 		<a href="game.html">game</a>
@@ -14,5 +16,17 @@
 		<a href="hsDuel.html">HS Duel</a>
 		<br/>
 		<a href="converter.html">Converter</a>
+		<div class="wrapper">
+		  <button id="start">Start</button>
+		  <button id="pause">Pause</button>
+		</div>
+		<div class="circle">
+		  <div id="minutes">
+			<div id="min">0</div>
+		  </div>
+		  <div id="seconds">
+			<div id="sec">0</div>
+		  </div>
+		</div>
 	</body>
 </html>

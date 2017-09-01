@@ -1,0 +1,36 @@
+.wrapper {
+  display: table;
+  margin: 0 auto;  
+}
+#start, #pause {
+  width: 60px;
+  margin: 10px;
+}
+.circle {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 150px;
+  margin: 20px auto 0;
+  position: relative;
+}
+#minutes, #seconds {
+  width: 2px;
+  height: 100px;
+  background: black;
+  position: absolute;
+  left: calc(50% - 1px);
+  top: 51px;
+  transform-origin: 100% 100%;
+  transform: rotate(0deg);
+}
+#seconds {
+  height: 130px;
+  top: 20px;
+}
+#sec, #min {
+  position: absolute;
+  left: -2px;
+  top:-18px;
+  transform: rotate(0deg);
+}
