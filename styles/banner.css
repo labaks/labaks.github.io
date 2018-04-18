@@ -1,0 +1,121 @@
+table td, table th {
+    border: 1px solid black;
+}
+table img {
+    max-height: 150px;
+}
+
+
+
+
+.clone {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 20px;
+    opacity: 0;
+    box-sizing: border-box;
+}
+.clone > img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.cloneTooltip {
+    width: 500px;
+    position: relative;
+    margin: 0 auto 20px;
+    font-size: 17px;
+    background: white;
+    padding: 10px 10px 10px 60px;
+    border-radius: 15px;
+}
+.cloneTooltip .fas {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    color: #00a678;
+    font-size: 40px;
+}
+.imageContainer {
+    position: relative;
+    margin: 0 auto;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.5);
+    font-family: sans-serif;
+}
+.bannerBorder {
+    display: inline-block;
+    position: relative;
+    background: #e3e3e3;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, .7) inset;
+    border: 3px solid #c5c5c5;
+}
+.bannerMainButton {
+    position: absolute;
+    border: 2px solid #969696;
+    box-shadow: 0 0 5px 3px rgba(255, 255, 255, .8) inset;
+    bottom: 3%;
+}
+.bannerLoudspeaker {
+    position: absolute;
+    width: 16%;
+    height: 2px;
+    background: #828282;
+    left: 42%;
+    top: 4%;
+}
+.bannerTimer {
+    width: 16%;
+    height: 6%;
+    background: #473a43;
+    border: 2px solid #b4bacb;
+    border-radius: 8px;
+    color: white;
+    position: absolute;
+    left: 42%;
+    top: 1%;
+    vertical-align: middle;
+}
+.bannerDislike, .bannerDontShow {
+    position: absolute;
+    height: 7%;
+    bottom: 2%;
+    width: auto;
+    background: white;
+    border: 2px solid red;
+    border-radius: 8px;
+    color: red;
+    padding: 0 5px;
+}
+.bannerDislike {
+    left: 4%;
+}
+.bannerDontShow {
+    right: 4%;
+}
+.bannerDislike span, .bannerDontShow span, .bannerTimer span {
+    height: 100%;
+    display: block;
+}
+.bannerDislike span, .bannerDontShow span {
+    float: left;
+}
+.fa-thumbs-down {
+    color: black;
+}
+.fa-times-circle {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    color: #a70f0f;
+    background: white;
+    padding: 1px;
+}
