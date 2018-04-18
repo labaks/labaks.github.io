@@ -48,8 +48,10 @@ table img {
     margin: 0 auto;
     background: white;
     box-sizing: border-box;
-    box-shadow: 0 0 2px 0 rgba(0,0,0,.5);
     font-family: sans-serif;
+}
+.bannerShadow {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .5);
 }
 .bannerBorder {
     display: inline-block;
@@ -105,7 +107,7 @@ table img {
     height: 100%;
     display: block;
 }
-.bannerDislike span, .bannerDontShow span {
+.bannerDislike span, .bannerDontShow span, .phoneScreen__toolbar .fa-phone {
     float: left;
 }
 .fa-thumbs-down {
@@ -118,4 +120,93 @@ table img {
     color: #a70f0f;
     background: white;
     padding: 1px;
+}
+.phoneScreen {
+    position: relative;
+    box-sizing: border-box;
+    background: linear-gradient(to top right, #596d4d, #a3955c, #a7985d,#707951);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .5);
+}
+.phoneScreen span {
+    font-family: sans-serif;
+    color: white;
+    position: absolute;
+}
+.phoneScreen__textCall {
+    left: 2%;
+    top: 4%;
+}
+.phoneScreen__textName {
+    top: 9%;
+    left: 41%;
+}
+.phoneScreen__textPhone {
+    top: 18%;
+    left: 23%;
+}
+.phoneScreen__greenBtn, .phoneScreen__redBtn {
+    position: absolute;
+    bottom: 8%;
+    color: white;
+}
+.imageContainer ~ div .fa-phone {
+    background: white;
+}
+.phoneScreen__greenBtn {
+    left: 10%;
+    padding-right: 10px;
+}
+.phoneScreen__greenBtn i {
+    transform: scale(-1, 1);
+    color: #00c700;
+}
+.phoneScreen__redBtn i {
+    transform: rotate(225deg);
+    color: #ff5a5a;
+}
+.phoneScreen__redBtn {
+    right: 10%;
+    padding-left: 10px;
+}
+.phoneScreen__greenBtn span, .phoneScreen__redBtn span {
+    top: 40%;
+    font-size: 50%;
+}
+.phoneScreen__greenBtn span {
+    right: -5px;
+}
+.phoneScreen__redBtn span {
+    left: -5px;
+}
+.phoneScreen__msg {
+    bottom: 0;
+    width: 80%;
+    left: 0;
+    background: rgba(255, 255, 255, .4);
+    margin: 0 10%;
+    border-radius: 8px 8px 0 0;
+    font-size: 50%; 
+}
+.moveIcon {
+    position: absolute;
+    background: url('../img/ad_move.png');
+    width: 15%;
+    height: 16%;
+    background-size: 100%;
+    left: 5%;
+    top: 40%;
+}
+.phoneScreen__toolbar {
+    width: 100%;
+    background: rgba(255, 255, 255, .3);
+    position: absolute;
+    top: 0;
+    color: white;
+    padding: 1px;
+}
+.phoneScreen__toolbar span {
+    right: 1%
+}
+.phoneScreen__toolbar {
+    font-size: 40%;
 }
