@@ -1,0 +1,37 @@
+body {
+    background: #b3ad97;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 580px;
+    color: #353435;
+}
+li {
+    display: inline-block;
+    margin: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+label {
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+    background: #dfddd4;
+    font-size: 26px;
+    font-weight: bold !important;
+}
+label:before {
+    display: block;
+    font-size: 110px;
+    margin-bottom: 10px;
+}
+input[type="checkbox"] {
+    visibility: hidden;
+    position: absolute;
+}
+input[type="checkbox"]:checked + label {
+    background: #55a983;
+    color: white;
+}
