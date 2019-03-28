@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.topHeader {
+    height: auto;
+    background-image: linear-gradient(to bottom, #3B98E4 0%, #1C569C 100%);;
+    padding: 3px 10px;
+}
+
+.topHeader div {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.topHeader a {
+    float: right;
+    background: black;
+    border-radius: 4px;
+    padding: 3px 5px;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, .3) inset, 0 2px 2px rgba(255, 255, 255, .5);
+    font-size: 13px;
+}
+
+.tableWrapper {
+    padding: 30px;
+    background: white;
+    margin: -24px auto 0;
+    background-image: linear-gradient(to left, #000000 0%, #3b98e4 50%, #000000 100%);
+}
+
+#TableSearch {
+    background: white;
+    color: black;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#TableSearch th {
+    padding: 10px 15px;
+}
+
+#TableSearch td {
+    padding: 10px 15px;
+    border-top: 1px solid black;
+}
+
+#TableSearch tr:nth-child(even) {
+    background: #6cbdff;
+}
+
+#TableSearch .quantity {
+    padding: 5px;
+    border-radius: 8px 0 0 8px;
+    max-width: 70px;
+    border: 1px solid black;
+    border-right: none;
+}
+
+#TableSearch input[type='submit'] {
+    border-radius: 0 8px 8px 0;
+    background: black;
+    color: white;
+    border: 1px solid black;
+    padding: 5px 6px;
+    float: right;
+    border-left: none;
+}
+
+#div_content p {
+    text-align: center;
+}
+
+#div_search {
+    text-align: center;
+    padding: 20px;
+}
+
+#div_search form {
+    width: 50%;
+    display: inline-block;
+    background: white;
+    position: relative;
+    box-shadow: 0 0 3px 2px #3b98e4 inset;
+    border-radius: 15px;
+}
+
+#SearchInput {
+    background: transparent;
+    border: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+#div_search input[type='submit'] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 37px;
+    background: transparent;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#div_search .fa-search {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    font-size: 22px;
+}
+
+#logo-header {
+    padding: 0 20px 20px;
+}
+
+.cart {
+    color: black;
+    font-size: 50px;
+    float: right;
+    background: white;
+    border-radius: 0 0 50px 50px;
+    width: 100px;
+    height: 83px;
+    box-sizing: border-box;
+    padding: 15px 17px;
+    position: relative;
+}
+
+.cart span {
+    background: white;
+    font-size: 14px;
+    border-radius: 14px;
+    padding: 7px;
+    box-shadow: 0 0 3px 1px #6cbdff inset;
+    position: absolute;
+    left: -16px;
+}
+
