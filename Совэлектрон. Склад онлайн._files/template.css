@@ -136,6 +136,30 @@ body {
 
 #logo-header {
     padding: 0 20px 20px;
+    overflow: hidden;
+}
+
+.logo {
+    background: url(logo.png) no-repeat;
+    width: 298px;
+    height: 85px;
+    display: block;
+    float: left;
+}
+
+.infoBlock {
+    float: right;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+
+.infoBlock span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.infoBlock span i {
+    margin-right: 5px;
 }
 
 .cart {
@@ -159,5 +183,15 @@ body {
     box-shadow: 0 0 3px 1px #6cbdff inset;
     position: absolute;
     left: -16px;
+}
+
+.sprite1 {
+    background: url(sprite2.png);
+    width: 227px;
+    height: 350px;
+    position: absolute;
+    transform: rotate(180deg);
+    top: 37px;
+    left: 0px;
 }
 
