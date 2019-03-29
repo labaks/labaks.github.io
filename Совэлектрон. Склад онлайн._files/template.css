@@ -152,6 +152,7 @@ body {
     height: 85px;
     display: block;
     float: left;
+    margin-top: 20px;
 }
 
 .infoBlock {
