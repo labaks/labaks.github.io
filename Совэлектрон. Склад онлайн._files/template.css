@@ -73,6 +73,10 @@ body {
     background: #6cbdff;
 }
 
+#TableSearch tr:hover {
+    box-shadow: 0 0 10px 4px rgba(0,0,0,.4) inset;
+}
+
 #TableSearch .quantity {
     padding: 5px;
     border-radius: 8px 0 0 8px;
@@ -93,6 +97,10 @@ body {
     padding: 5px 6px;
     float: right;
     border-left: none;
+}
+
+#TableSearch input[type='submit']:hover {
+    box-shadow: 0 0 3px 1px white inset;
 }
 
 #div_content p {
@@ -183,6 +191,10 @@ body {
     position: relative;
 }
 
+.cart:hover {
+    box-shadow: 0 0 6px 3px #6cbdff inset;
+}
+
 .cart span {
     background: white;
     font-size: 14px;
@@ -191,15 +203,5 @@ body {
     box-shadow: 0 0 3px 1px #6cbdff inset;
     position: absolute;
     left: -16px;
-}
-
-.sprite1 {
-    background: url(sprite2.png);
-    width: 227px;
-    height: 350px;
-    position: absolute;
-    transform: rotate(180deg);
-    top: 37px;
-    left: 0px;
 }
 
