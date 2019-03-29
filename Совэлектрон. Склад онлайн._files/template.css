@@ -7,7 +7,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-    background: black;
+    background: black url(bg1.jpg);
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-size: contain;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
@@ -76,6 +79,10 @@ body {
     max-width: 70px;
     border: 1px solid black;
     border-right: none;
+}
+
+#TableSearch form {
+    width: 145px;
 }
 
 #TableSearch input[type='submit'] {
