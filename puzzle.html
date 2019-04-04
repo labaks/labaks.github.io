@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Puzzle</title>
+</head>
+
+<body>
+
+	<style>
+		.randomBlock {
+			position: absolute;
+			background: url(img/puzzleSprite.png);
+
+		}
+		.randomBlockHolder {
+			position: relative;
+			margin: 0 auto;
+			border: 1px solid green;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+
+		$(function() {
+			var cellWidth = 81.75,
+			cellHeight = 82.125,
+			bgWidth = 981,
+			bgHeight = 657,
+			count = 10,
+			countHorizontal = 12,
+			countVertical = 8;
+
+
+			var dimen = (window.innerWidth > 0) ? window.innerHeight : screen.width;
+			dimen *= 0.9;
+
+			var blockWidth = dimen / 10;
+			var blockHeight = dimen / 10;
+
+			$('.randomBlockHolder').css("width", dimen + "px").css("height", dimen + "px");
+
+			for(var i = 0; i < count; i++) {
+				$('.randomBlockHolder')
+				.append('<div id="' + i + '" class="randomBlock"></div>');
+				var top = Math.random() * dimen;
+				var left = Math.random() * dimen;
+				top = top + blockHeight >= dimen ? top - (top + blockHeight - dimen) : top;
+				left = left + blockWidth >= dimen ? left - (left + blockWidth - dimen) : left;
+				var bgPosX = Math.floor(Math.random() * countHorizontal) * blockWidth;
+				var bgPosY = Math.floor(Math.random() * countVertical) * blockHeight;
+				$('#' + i).css("backgroundPositionX", bgPosX + "px")
+				.css("backgroundPositionY", bgPosY + "px")
+				.css("left", left + "px")
+				.css("top", top + "px");
+			}
+
+			$('.randomBlock').css("width", blockWidth + "px")
+			.css("height", blockHeight + "px")
+			.css("backgroundSize", bgWidth * (blockWidth / cellWidth) + "px " + bgHeight * (blockHeight / cellHeight) + "px");
+		});
+	</script>
+	<div class="randomBlockHolder"></div>
+</body>
+
+</html>
