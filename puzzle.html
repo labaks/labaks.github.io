@@ -34,29 +34,29 @@
 			cellHeight = 82.125,
 			bgWidth = 981,
 			bgHeight = 657,
-			count = $('#count').val(),
 			countHorizontal = 12,
-			countVertical = 8;
+			countVertical = 8,
+			relativeAmount = 10;
 
-			console.log(count);
-			var dimen = (window.innerWidth > 0) ? window.innerHeight : screen.width;
+			var dimen = screen.width > screen.height ? screen.height : screen.width;
 			dimen *= 0.9;
+			var count = $('#count').val();
 
-			var blockWidth = dimen / 10;
-			var blockHeight = dimen / 10;
+			var blockWidth = dimen / relativeAmount;
+			var blockHeight = dimen / relativeAmount;
 
 			$('.randomBlockHolder').css("width", dimen + "px").css("height", dimen + "px");
 
 			for(var i = 0; i < count; i++) {
 				$('.randomBlockHolder')
-				.append('<div id="' + i + '" class="randomBlock"></div>');
+				.append('<div id="randomBlock' + i + '" class="randomBlock"></div>');
 				var top = Math.random() * dimen;
 				var left = Math.random() * dimen;
 				top = top + blockHeight >= dimen ? top - (top + blockHeight - dimen) : top;
 				left = left + blockWidth >= dimen ? left - (left + blockWidth - dimen) : left;
 				var bgPosX = Math.floor(Math.random() * countHorizontal) * blockWidth;
 				var bgPosY = Math.floor(Math.random() * countVertical) * blockHeight;
-				$('#' + i).css("backgroundPositionX", bgPosX + "px")
+				$('#randomBlock' + i).css("backgroundPositionX", bgPosX + "px")
 				.css("backgroundPositionY", bgPosY + "px")
 				.css("left", left + "px")
 				.css("top", top + "px");
