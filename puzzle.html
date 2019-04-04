@@ -19,21 +19,25 @@
 			margin: 0 auto;
 			border: 1px solid green;
 		}
+		.buttons {
+			text-align: center;
+		}
 	</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
+		function generate() {
+			$(".randomBlockHolder").empty();
 
-		$(function() {
 			var cellWidth = 81.75,
 			cellHeight = 82.125,
 			bgWidth = 981,
 			bgHeight = 657,
-			count = 10,
+			count = $('#count').val(),
 			countHorizontal = 12,
 			countVertical = 8;
 
-
+			console.log(count);
 			var dimen = (window.innerWidth > 0) ? window.innerHeight : screen.width;
 			dimen *= 0.9;
 
@@ -60,8 +64,12 @@
 			$('.randomBlock').css("width", blockWidth + "px")
 			.css("height", blockHeight + "px")
 			.css("backgroundSize", bgWidth * (blockWidth / cellWidth) + "px " + bgHeight * (blockHeight / cellHeight) + "px");
-		});
+		};
 	</script>
+	<div class="buttons">
+		<input id="count" type="number" placeholder="enter amount" />
+		<input type="submit" onclick="generate();" value="Generate" />
+	</div>
 	<div class="randomBlockHolder"></div>
 </body>
 
