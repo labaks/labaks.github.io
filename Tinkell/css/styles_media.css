@@ -1,0 +1,84 @@
+@media only screen and (max-width: 1366px) {
+    .header {
+        padding: 20px 2%;
+    }
+    .searchBlockButtons {
+        padding: 4px 10px;
+    }
+    .loginBlock a {
+        margin: 0 10px;
+    }
+    .tags {
+        width: 74%;
+    }
+    .contentBlock {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .group_sideBlock {
+        padding-left: 150px;
+    }
+    .footer {
+        padding: 30px 5%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .searchBlockInputGroup {
+        width: 62%;
+    }
+    .searchBlock_buttonsBlock {
+        width: 37%;
+    }
+    a.timeRangeFilter_button {
+        padding: 10px 30px;
+    }
+    .member {
+        width: 50px;
+        height: 50px;
+    }
+    .more {
+        padding-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .searchBlock {
+        width: 55%;
+    }
+    .searchBlock:before {
+        height: 30px;
+        width: 30px;
+        left: -27px;
+        top: 4px;
+    }
+    .searchBlock_buttonsBlock {
+        width: 43%;
+        padding: 8px 5px 8px 10px;
+    }
+    .searchBlockInputGroup {
+        width: 56%;
+    }
+    .searchBlockButtons {
+        padding: 4px 8px;
+    }
+    .loginBlock a {
+        margin: 0 3px;
+    }
+    .logo {
+        width: 160px;
+    }
+    .tags {
+        width: 90%;
+    }
+    a.timeRangeFilter_button {
+        padding: 10px 20px;
+        margin: 0 5px;
+    }
+    .group_sideBlock {
+        padding-left: 70px;
+    }
+    .footer_linksBlock>a, .footer_social {
+        margin: 0 10px;
+    }
+}

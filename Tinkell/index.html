@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tinkell | Home</title>
+    <link rel="stylesheet"
+          href="css/styles.css">
+    <link rel="stylesheet"
+          href="css/styles_media.css">
+    <link rel="stylesheet"
+          href="css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logoBlock">
+            <div class="logo">
+                <a href="#"
+                   class="logoBlock_link"
+                   onclick="openLogoMenu();"></a>
+                <ul class="logoBlock_menu">
+                    <li><a href="#"
+                           class="logoBlock_menu_home">Home</a></li>
+                    <li><a href="#"
+                           class="logoBlock_menu_toRead">To read</a></li>
+                    <li><a href="#"
+                           class="logoBlock_menu_topGroups">Top groups</a></li>
+                    <li><a href="#"
+                           class="logoBlock_menu_newGroups">New groups</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="searchBlock">
+            <div class="searchBlockInputGroup">
+                <input type="text"
+                       placeholder="Search...">
+                <a href="#"
+                   class="fas fa-search"></a>
+            </div>
+            <div class="searchBlock_buttonsBlock">
+                <a href="#"
+                   onclick="setActiveSearchButton(this)"
+                   class="searchBlockButtons active">Groups</a>
+                <a href="#"
+                   onclick="setActiveSearchButton(this)"
+                   class="searchBlockButtons">To Read</a>
+                <a href="#"
+                   onclick="setActiveSearchButton(this)"
+                   class="searchBlockButtons">All</a>
+            </div>
+        </div>
+        <div class="loginBlock">
+            <a href="#"
+               class="signupButton"
+               onclick="openDialog('signupDialog');">Sign up</a>
+            <a href="#"
+               class="loginButton"
+               onclick="openDialog('loginDialog');">Log in
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#"
+               class="menuBurger fas fa-bars"></a>
+        </div>
+    </div>
+    <div class="tagsBlock">
+        <ul class="tags">
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Beauty & health">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Fashion">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Sport">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Food">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Education">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="News">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Relationship">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Home & Family">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Pregnancy">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Kids">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Entertainment">
+            </li>
+            <li class="tagWrapper">
+                <input type="button"
+                       class="tagButton"
+                       value="Shopping">
+            </li>
+        </ul>
+        <div class="sideButtons">
+            <a href="#"
+               class="leftButton fas fa-arrow-left"></a>
+            <a href="#"
+               class="rightButton fas fa-arrow-right"></a>
+        </div>
+    </div>
+    <div class="mostPopularBlock contentBlock">
+        <h2 class="blockTitle">Most Popular to Read</h2>
+        <div class="articlesCarousel">
+            <div>
+                <div class="article">
+                    <img class="article_img"
+                         src="img/1.jpg">
+                    <p class="article_title">Cras rhoncus suscipit eros.</p>
+                    <span class="article_text">Vivamus sit amet tincidunt nunc. Nullam egestas nisl eget urna varius malesuada.</span>
+                </div>
+                <div class="article">
+                    <img class="article_img"
+                         src="img/2.jpg">
+                    <p class="article_title">Cras rhoncus suscipit eros.</p>
+                    <span class="article_text">Vivamus sit amet tincidunt nunc. Nullam egestas nisl eget urna varius malesuada. Duis non tristique dolor. Sed eget tellus posuere, suscipit velit quis.</span>
+                </div>
+                <div class="article">
+                    <img class="article_img"
+                         src="img/3.jpg">
+                    <p class="article_title">Cras rhoncus suscipit eros.</p>
+                    <span class="article_text">Vivamus sit amet tincidunt nunc. Nullam egestas nisl eget urna varius malesuada. Duis non tristique dolor. Sed eget tellus posuere, suscipit velit quis.</span>
+                </div>
+            </div>
+            <a href="#"
+               class="leftButton fas fa-arrow-left"></a>
+            <a href="#"
+               class="rightButton fas fa-arrow-right"></a>
+        </div>
+        <div class="mainArticle">
+            <img src="img/4.jpg"
+                 class="mainArticle_img">
+            <div class="mainArticle_textBlock">
+                <p class="mainArticle_title">Quisque eu mollis mauris</p>
+                <p class="mainArticle_text">Vivamus sit amet tincidunt nunc. Nullam egestas nisl eget urna varius malesuada. Duis non tristique dolor. Sed eget tellus posuere, suscipit velit quis, ornare risus. Fusce ornare pellentesque posuere. Aliquam accumsan posuere ex vel auctor.
+                    <br />
+                    Vivamus sit amet tincidunt nunc. Nullam egestas nisl eget urna varius malesuada. Duis non tristique dolor. Sed eget tellus posuere, suscipit velit quis, ornare risus. Fusce ornare pellentesque posuere. Aliquam accumsan posuere ex vel auctor.
+                    <br />
+                    Vivamus sit amet tincidunt nunc. Nullam egestas nisl eget urna varius malesuada. Duis non tristique dolor. Sed eget tellus posuere, suscipit velit quis, ornare risus. Fusce ornare pellentesque posuere. Aliquam accumsan posuere ex vel auctor.
+                </p>
+                <p class="mainArticle_linkWrapper">
+                    <a href="#"
+                       class="mainArticle_readLink">Read</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="mostActiveUsersBlock contentBlock">
+        <h2 class="blockTitle">Most Active Users</h2>
+        <ul class="mostActiveUsersBlock_wrapper">
+            <li class="mostActiveUsersBlock_user">
+                <img src="img/man.jpg"
+                     class="mauBlock_user_avatar">
+                <span class="mauBlock_user_name">Julian Lagros</span>
+            </li>
+            <li class="mostActiveUsersBlock_user">
+                <img src="img/woman.jpg"
+                     class="mauBlock_user_avatar">
+                <span class="mauBlock_user_name">Carol Hepburn</span>
+            </li>
+            <li class="mostActiveUsersBlock_user">
+                <img src="img/man.jpg"
+                     class="mauBlock_user_avatar">
+                <span class="mauBlock_user_name">Julian Lagros</span>
+            </li>
+            <li class="mostActiveUsersBlock_user">
+                <img src="img/woman.jpg"
+                     class="mauBlock_user_avatar">
+                <span class="mauBlock_user_name">Carol Hepburn</span>
+            </li>
+            <li class="mostActiveUsersBlock_user">
+                <img src="img/man.jpg"
+                     class="mauBlock_user_avatar">
+                <span class="mauBlock_user_name">Julian Lagros</span>
+            </li>
+            <li class="mostActiveUsersBlock_user">
+                <img src="img/woman.jpg"
+                     class="mauBlock_user_avatar">
+                <span class="mauBlock_user_name">Carol Hepburn</span>
+            </li>
+            <li class="mostActiveUsersBlock_user">
+                <img src="img/man.jpg"
+                     class="mauBlock_user_avatar">
+                <span class="mauBlock_user_name">Julian Lagros</span>
+            </li>
+            <li class="mostActiveUsersBlock_user">
+                <img src="img/woman.jpg"
+                     class="mauBlock_user_avatar">
+                <span class="mauBlock_user_name">Carol Hepburn</span>
+            </li>
+        </ul>
+    </div>
+    <div class="mostPopularGroupsBlock contentBlock">
+        <h2 class="blockTitle blockTitleWithFilter">Most Popular Groups</h2>
+        <div class="timeRangeFilter">
+            <a href="#"
+               class="timeRangeFilter_button">Today</a>
+            <a href="#"
+               class="timeRangeFilter_button">Week</a>
+            <a href="#"
+               class="timeRangeFilter_button">Month</a>
+            <a href="#"
+               class="timeRangeFilter_button">Year</a>
+        </div>
+        <div class="mpgBlock_wrapper">
+            <div class="group">
+                <div class="group_header">
+                    <span class="group_header_tag">Home & Family</span>
+                    <span class="group_header_date">18 June, 2020</span>
+                </div>
+                <div class="group_content">
+                    <img src="img/1.jpg"
+                         class="group_content_img">
+                    <span class="group_content_title">In at magna ultrices nisi</span>
+                    <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+                </div>
+                <div class="group_sideBlock">
+                    <div class="group_sideBlock_members">
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/woman.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           class="more member fas fa-ellipsis-h"></a>
+                    </div>
+                    <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                    <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group_header">
+                    <span class="group_header_tag">Beauty & Health</span>
+                    <span class="group_header_date">18 June, 2020</span>
+                </div>
+                <div class="group_content">
+                    <img src="img/2.jpg"
+                         class="group_content_img">
+                    <span class="group_content_title">In at magna ultrices nisi</span>
+                    <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+                </div>
+                <div class="group_sideBlock">
+                    <div class="group_sideBlock_members">
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/woman.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           class="more member fas fa-ellipsis-h"></a>
+                    </div>
+                    <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                    <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group_header">
+                    <span class="group_header_tag"></span>
+                    <span class="group_header_date">18 June, 2020</span>
+                </div>
+                <div class="group_content">
+                    <img src="img/3.jpg"
+                         class="group_content_img">
+                    <span class="group_content_title">In at magna ultrices nisi</span>
+                    <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+                </div>
+                <div class="group_sideBlock">
+                    <div class="group_sideBlock_members">
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/woman.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           class="more member fas fa-ellipsis-h"></a>
+                    </div>
+                    <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                    <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group_header">
+                    <span class="group_header_tag"></span>
+                    <span class="group_header_date">18 June, 2020</span>
+                </div>
+                <div class="group_content">
+                    <img src="img/4.jpg"
+                         class="group_content_img">
+                    <span class="group_content_title"></span>
+                    <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+                </div>
+                <div class="group_sideBlock">
+                    <div class="group_sideBlock_members">
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/woman.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           class="more member fas fa-ellipsis-h"></a>
+                    </div>
+                    <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                    <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group_header">
+                    <span class="group_header_tag"></span>
+                    <span class="group_header_date">18 June, 2020</span>
+                </div>
+                <div class="group_content">
+                    <img src="img/5.jpg"
+                         class="group_content_img">
+                    <span class="group_content_title">In at magna ultrices nisi</span>
+                    <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+                </div>
+                <div class="group_sideBlock">
+                    <div class="group_sideBlock_members">
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/woman.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           style="background: url('img/man.jpg');"
+                           class="member"></a>
+                        <a href="#"
+                           class="more member fas fa-ellipsis-h"></a>
+                    </div>
+                    <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                    <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newGroupsBlock contentBlock">
+        <h2 class="blockTitle">New in the Groups</h2>
+        <div class="group">
+            <div class="group_header">
+                <span class="group_header_tag"></span>
+                <span class="group_header_date">18 June, 2020</span>
+            </div>
+            <div class="group_content">
+                <img src="img/6.jpg"
+                     class="group_content_img">
+                <span class="group_content_title"></span>
+                <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+            </div>
+            <div class="group_sideBlock">
+                <div class="group_sideBlock_members">
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/woman.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       class="more member fas fa-ellipsis-h"></a>
+                </div>
+                <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+            </div>
+        </div>
+        <div class="group">
+            <div class="group_header">
+                <span class="group_header_tag"></span>
+                <span class="group_header_date">18 June, 2020</span>
+            </div>
+            <div class="group_content">
+                <img src="img/1.jpg"
+                     class="group_content_img">
+                <span class="group_content_title">In at magna ultrices nisi</span>
+                <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+            </div>
+            <div class="group_sideBlock">
+                <div class="group_sideBlock_members">
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/woman.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       class="more member fas fa-ellipsis-h"></a>
+                </div>
+                <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+            </div>
+        </div>
+        <div class="group">
+            <div class="group_header">
+                <span class="group_header_tag"></span>
+                <span class="group_header_date">18 June, 2020</span>
+            </div>
+            <div class="group_content">
+                <img src="img/2.jpg"
+                     class="group_content_img">
+                <span class="group_content_title"></span>
+                <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+            </div>
+            <div class="group_sideBlock">
+                <div class="group_sideBlock_members">
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/woman.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       class="more member fas fa-ellipsis-h"></a>
+                </div>
+                <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+            </div>
+        </div>
+        <div class="group">
+            <div class="group_header">
+                <span class="group_header_tag"></span>
+                <span class="group_header_date">18 June, 2020</span>
+            </div>
+            <div class="group_content">
+                <img src="img/3.jpg"
+                     class="group_content_img">
+                <span class="group_content_title">In at magna ultrices nisi</span>
+                <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+            </div>
+            <div class="group_sideBlock">
+                <div class="group_sideBlock_members">
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/woman.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       class="more member fas fa-ellipsis-h"></a>
+                </div>
+                <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+            </div>
+        </div>
+        <div class="group">
+            <div class="group_header">
+                <span class="group_header_tag"></span>
+                <span class="group_header_date">18 June, 2020</span>
+            </div>
+            <div class="group_content">
+                <img src="img/4.jpg"
+                     class="group_content_img">
+                <span class="group_content_title"></span>
+                <span class="group_content_text">Duis egestas pharetra eros et ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium dolor eleifend metus tincidunt hendrerit. Curabitur eu porttitor neque. Donec id vulputate felis, at volutpat lacus. Nam velit ante, malesuada eu lobortis sit amet, tristique vel nibh.</span>
+            </div>
+            <div class="group_sideBlock">
+                <div class="group_sideBlock_members">
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/woman.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       style="background: url('img/man.jpg');"
+                       class="member"></a>
+                    <a href="#"
+                       class="more member fas fa-ellipsis-h"></a>
+                </div>
+                <span class="group_sideBlock_membersCount"><i class="fas fa-user-friends"></i>55 000 Members</span>
+                <span class="group_sideBlock_seenCount"><i class="far fa-eye"></i>600</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="logoBlock">
+            <div class="logo"></div>
+        </div>
+        <div class="footer_linksBlock">
+            <a href="#"
+               class="">Terms of Use</a>
+            <a href="#"
+               class="">Contact us</a>
+            <a href="#">tinkell@tkl.com</a>
+            <div class="footer_social">
+                <a href="#"
+                   class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#"
+                   class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"
+                   class="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer_subscribeBlock">
+            <span>Subscribe to our newsletter</span>
+            <div class="inputWithIcon">
+                <input type="text"
+                       placeholder="Your Email">
+                <a href="#"
+                   class="inputSubmit fas fa-arrow-right"></a>
+            </div>
+        </div>
+    </div>
+    <div id="loginDialog"
+         class="dialogBackground">
+        <div class="dialog loginDialog">
+            <a href="#"
+               onclick="closeDialog('loginDialog')"
+               class="dialog_close fas fa-times"></a>
+            <div class="dialog_content">
+                <div class="logo"></div>
+                <h2 class="dialog_title">Login</h2>
+                <input type="text"
+                       class="dialog_input"
+                       placeholder="User Name">
+                <input type="text"
+                       class="dialog_input"
+                       placeholder="Password">
+                <a href="#"
+                   class="dialog_button">Login</a>
+                <div class="dialog_social">
+                    <span>Or Login with</span>
+                    <a href="#"
+                       class="googlePlus fab fa-google-plus-square"></a>
+                    <a href="#"
+                       class="facebook fab fa-facebook-square"></a>
+                    <a href="#"
+                       class="twitter fab fa-twitter-square"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="signupDialog"
+         class="dialogBackground">
+        <div class="dialog">
+            <a href="#"
+               onclick="closeDialog('signupDialog')"
+               class="dialog_close fas fa-times"></a>
+            <div class="dialog_content">
+                <div class="logo"></div>
+                <h2 class="dialog_title">Sign Up</h2>
+                <input type="text"
+                       class="dialog_input"
+                       placeholder="Your name">
+                <input type="text"
+                       class="dialog_input"
+                       placeholder="Your e-mail">
+                <input type="text"
+                       class="dialog_input"
+                       placeholder="Password">
+                <input type="text"
+                       class="dialog_input"
+                       placeholder="Repeat Password">
+                <a href="#"
+                   class="dialog_button">Sign up</a>
+                <div class="dialog_social">
+                    <span>Or Sign Up with</span>
+                    <a href="#"
+                       class="googlePlus fab fa-google-plus-square"></a>
+                    <a href="#"
+                       class="facebook fab fa-facebook-square"></a>
+                    <a href="#"
+                       class="twitter fab fa-twitter-square"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
