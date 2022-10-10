@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Puzzle</title>
+</head>
+
+<body>
+
+	<style>
+		.randomBlock {
+			position: absolute;
+			background: url(img/micro.png);
+
+		}
+
+		.randomBlockHolder {
+			position: relative;
+			margin: 0 auto;
+			border: 1px solid green;
+		}
+
+		.buttons {
+			text-align: center;
+		}
+
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".randomBlockHolder").empty();
+
+			// var cellWidth = 81.75,
+			// 	cellHeight = 82.125,
+			// 	bgWidth = 981,
+			// 	bgHeight = 657,
+			// 	countHorizontal = 12,
+			// 	countVertical = 8,
+			// 	relativeAmount = 10;
+
+			var cellWidth = 125,
+				cellHeight = 125,
+				bgWidth = 1000,
+				bgHeight = 1000,
+				countHorizontal = 8,
+				countVertical = 8,
+				relativeAmount = 10;
+
+			var dimen = screen.width > screen.height ? screen.height : screen.width;
+			dimen *= 0.8;
+			var count = 10;
+
+			var blockWidth = dimen / relativeAmount;
+			var blockHeight = dimen / relativeAmount;
+
+			$('.randomBlockHolder').css("width", dimen + "px").css("height", dimen + "px");
+
+			for (var i = 0; i < count; i++) {
+				$('.randomBlockHolder')
+					.append('<div id="randomBlock' + i + '" class="randomBlock"></div>');
+				var top = Math.random() * dimen;
+				var left = Math.random() * dimen;
+				top = top + blockHeight >= dimen ? top - (top + blockHeight - dimen) : top;
+				left = left + blockWidth >= dimen ? left - (left + blockWidth - dimen) : left;
+				var bgPosX = Math.floor(Math.random() * countHorizontal) * blockWidth;
+				var bgPosY = Math.floor(Math.random() * countVertical) * blockHeight;
+				var rotate = Math.floor(Math.random() * 360);
+				$('#randomBlock' + i).css("backgroundPositionX", bgPosX + "px")
+					.css("backgroundPositionY", bgPosY + "px")
+					.css("left", left + "px")
+					.css("top", top + "px")
+					.css("transform", "rotate(" + rotate + "deg)");
+			}
+
+			$('.randomBlock').css("width", blockWidth + "px")
+				.css("height", blockHeight + "px")
+				.css("backgroundSize", bgWidth * (blockWidth / cellWidth) + "px " + bgHeight * (blockHeight / cellHeight) + "px");
+		});
+	</script>
+	<div class="randomBlockHolder"></div>
+</body>
+
+</html>
