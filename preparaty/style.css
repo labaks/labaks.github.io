@@ -1,0 +1,439 @@
+/* --- Общие стили для экрана --- */
+/* Устанавливаем box-sizing для всех элементов, чтобы избежать проблем с шириной */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* гарантируем учет padding в ширине */
+}
+
+/* Доп. защита: запретим вложенным элементам превышать ширину родителя */
+.container * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden; /* Предотвращает выход дочерних элементов за границы */
+    margin-bottom: 20px;
+
+    /* Новые правила: не выходить за ширину контейнера */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    flex: 0 0 150px; /* Фиксированная ширина для метки */
+    margin-right: 15px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    width: 100%;
+    margin-top: 10px;
+}
+.btn-primary:hover { background-color: #2980b9; }
+
+.btn-secondary { background-color: #2ecc71; }
+.btn-secondary:hover { background-color: #27ae60; }
+
+.product-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+
+    /* Новые правила: строки заголовка/товаров должны занимать не больше ширины родителя */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.product-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: end;
+
+    /* Новые правила: строки заголовка/товаров должны занимать не больше ширины родителя */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/* Устанавливаем min-width: 0, чтобы flex-элементы могли сжиматься */
+.product-row > * {
+    min-width: 0;
+}
+
+/* Уменьшаем отступы для полей в строке товара */
+.product-row input, .product-row select {
+    padding: 8px;
+    font-size: 15px;
+}
+
+/* Используем flex-basis в процентах для более предсказуемого сжатия */
+.header-product, .product-row .product-selection-group { flex: 1 1 30%; }
+.header-variant, .header-quantity, .header-price, .header-sum { flex: 1 1 15%; }
+
+.header-product {
+    margin-right: 10px;;
+}
+
+/* Для десктопа: группы ведут себя как flex-контейнеры в строке */
+.product-row .product-details-group {
+    display: flex;
+    flex: 1 1 30%; /* Делим оставшееся место поровну */
+    gap: 10px;
+}
+
+.product-row .product-details-group > * {
+    flex: 1 1 50%;
+}
+
+.header-action { width: 30px; flex-shrink: 0; }
+/*
+.product-row .product-selection-group { flex: 2; display: flex; flex-direction: column; }
+.product-row .product-selection-group .product-filter { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.product-row .product-selection-group .product-select { border-top-left-radius: 0; border-top-right-radius: 0; border-top: none; }
+.product-row .product-variant { flex: 2; }
+.product-row .product-quantity { flex: 1; }
+.product-row .product-price { flex: 1; background-color: #f0f0f0; }
+.product-row .product-row-sum { flex: 1; background-color: #f0f0f0; }
+*/
+.product-row .product-selection-group { display: flex; flex-direction: column; }
+.product-row .product-selection-group .product-filter { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.product-row .product-selection-group .product-select { border-top-left-radius: 0; border-top-right-radius: 0; border-top: none; }
+.product-row .product-price,
+.product-row .product-row-sum {
+    padding: 8px;
+}
+
+.product-quantity {
+    box-sizing: content-box;
+    max-width: 50%;
+}
+
+.remove-product-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.remove-product-btn:hover { background-color: #c0392b; }
+
+.total-sum {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#totalSum {
+    color: #2c3e50;
+}
+
+/* Стили для обертки полей "Дата" и "Подпис" */
+.form-group-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.form-group-row .form-group {
+    margin-bottom: 0; /* Убираем нижний отступ у вложенных групп */
+}
+
+/* По умолчанию скрываем поле для подписи */
+.signature-field { display: none; }
+
+/* --- Стили для мобильных устройств --- */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        padding: 10px 7px; /* Уменьшаем боковые отступы */
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    fieldset {
+        padding: 15px 10px; /* Уменьшаем отступы внутри секций */
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    /* Перестраиваем основные поля в колонку */
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        flex-basis: auto;
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input, .form-group select {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    /* Убираем обертку для скролла, она больше не нужна */
+    .products-table-wrapper {
+        margin-bottom: 10px;
+    }
+
+    /* Скрываем статическую шапку таблицы на мобильных */
+    .product-header {
+        display: none;
+    }
+
+    /* Превращаем строку товара в карточку */
+    .product-row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        padding: 10px; /* Уменьшаем отступы внутри карточки товара */
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        position: relative;
+        padding-top: 40px; /* Место для кнопки удаления */
+    }
+
+    .product-row .product-selection-group { width: 100%; }
+
+    /* Добавляем подписи к полям с помощью псевдо-элементов */
+    .product-row .product-selection-group::before,
+    .product-row .product-details-group > [data-label]::before {
+        content: attr(data-label);
+        font-weight: bold;
+        font-size: 14px;
+        color: #555;
+        margin-right: 10px;
+    }
+    
+    /* Для мобильных: группы становятся сеткой 2x2 */
+    .product-row .product-details-group {
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .product-row .product-details-group > * {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 50%;
+    }
+
+    .product-row > .product-price,
+    .product-row > .product-row-sum {
+        border: none;
+        background-color: transparent;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    /* Позиционируем кнопку удаления в правый верхний угол карточки */
+    .product-row .remove-product-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .btn-secondary {
+        width: 100%;
+    }
+}
+
+    /* Для мобильных устройств перестраиваем строку с датой и подписью в колонку */
+    .form-group-row {
+        flex-direction: row;
+        gap: 15px;
+    }
+/* --- Стили для печати (перемещены в конец для приоритета) --- */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+        font-size: 12pt;
+    }
+
+    /* Скрываем все, кроме контейнера формы */
+    body * {
+        visibility: hidden;
+    }
+    .container, .container * {
+        visibility: visible;
+    }
+    .container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    /* Скрываем ненужные для печати элементы */
+    .btn, .remove-product-btn, .product-filter {
+        display: none !important;
+    }
+
+    fieldset {
+        border: none;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    legend {
+        padding: 0;
+    }
+
+    /* Упрощаем вид полей и заменяем их на текст, где возможно */
+    input, select {
+        border: none !important;
+        box-shadow: none !important;
+        background-color: #fff !important;
+        padding: 2px 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    /* Переопределяем мобильные стили для .form-group */
+    .form-group {
+        flex-direction: row !important;
+        align-items: center !important;
+        margin-bottom: 5px !important;
+    }
+
+    .form-group label {
+        margin-bottom: 0 !important;
+        font-weight: normal !important;
+    }
+
+    /* Показываем поле для подписи и добавляем линию */
+    .signature-field {
+        display: flex !important;
+        flex: 1;
+    }
+    .signature-field label::after {
+        content: "___________________";
+        margin-left: 10px;
+    }
+
+
+
+    /* Переопределяем мобильные стили для строк товаров */
+    .product-header {
+        display: flex !important;
+        border-bottom: 1px solid #ccc !important;
+        padding-bottom: 5px !important;
+    }
+    .product-row {
+        flex-direction: row !important;
+        border: none !important;
+        padding: 5px 50px 5px 0 !important;
+        border-bottom: 1px solid #e0e0e0 !important;
+        margin-bottom: 0 !important;    
+    }
+    .product-row .product-details-group {
+        display: flex !important;
+        flex-direction: row !important;
+        width: auto !important;
+    }
+    .product-row .product-details-group > * {
+        width: auto !important;
+        flex-direction: row !important;
+    }
+    .product-quantity {
+        text-align: center;
+    }
+    .product-row .product-selection-group::before, .product-row .product-details-group > [data-label]::before {
+        display: none; /* Скрываем мобильные подписи */
+    }
+
+    #totalSum {
+        margin-left: 10px;
+    }
+}
